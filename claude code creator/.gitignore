@@ -16,3 +16,6 @@ desktop.ini
 *.log
 *.swp
 *.bak
+
+# Transient tracking files (tasks tracked in Apollo, not needed in Git)
+APOLLO_M3_CONTACTS.md
