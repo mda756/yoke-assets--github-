@@ -1,0 +1,127 @@
+{
+  "title": "AI-powered publishing and learning proof 29-01-26 Draft",
+  "acf": {
+    "panels": [
+      {
+        "acf_fc_layout": "hero",
+        "image_positioning": false,
+        "hero_image": 4063,
+        "hero_title": "Stop broadcasting. Start proving.",
+        "hero_content": "<h3><span style=\"color: #ffffff;\">AI-powered publishing and learning proof for healthcare publishers and education providers.</span></h3>\n<p><span style=\"color: #ffffff;\">You already publish strong content.\nThe commercial pressure is different now. Sponsors and leaders want proof, not attendance and clicks.\nYoke turns your content into engagement you can measure, explain, and act on.</span></p>",
+        "hero_button": "Find Out More",
+        "hero_link": "#"
+      },
+      {
+        "acf_fc_layout": "two_col_panel",
+        "reverse": false,
+        "alignment": false,
+        "width": "third",
+        "image_two_col": 4049,
+        "background_colour": null,
+        "border_colour": null,
+        "content_two_col": "<h1><span style=\"color: #003366;\"><strong>What your sponsors and leadership actually want</strong></span></h1>\n<ul class=\"custom-ticks yellow\">\n<li>Proof of engagement depth, not vanity metrics.</li>\n<li>Proof of learning lift, confidence shift, and decision movement where it matters.</li>\n<li>Insight you can use this week, not a post-campaign PDF three months later.</li>\n<li>Visibility on what's working, what's failing, and where people drop.</li>\n<li>Clear gaps: what audiences search for, ask in chat, and cannot find.</li>\n<li>Speed: fix underperforming modules fast and see the impact, not next quarter.</li>\n</ul>"
+      },
+      {
+        "acf_fc_layout": "spacing",
+        "spacing_size": "small"
+      },
+      {
+        "acf_fc_layout": "two_col_panel",
+        "reverse": true,
+        "alignment": false,
+        "width": "third",
+        "image_two_col": 3663,
+        "background_colour": null,
+        "border_colour": null,
+        "content_two_col": "<h1><span style=\"color: #003366;\"><strong>Yoke is the learning performance layer for modern healthcare publishing</strong></span></h1>\n<ul class=\"custom-ticks yellow\">\n<li>Turn PDFs, decks and video into interactive journeys fast.</li>\n<li>Measure decisions, confidence, knowledge gaps, and engagement heatmaps.</li>\n<li>Create sponsor-ready reporting that defends renewal and increases package value.</li>\n<li>Keep audiences coming back with personalised micro-content and progress mechanics.</li>\n<li>Run the always-on loop: engagement \u2192 proof \u2192 insight \u2192 speed to action \u2192 repeat.</li>\n</ul>"
+      },
+      {
+        "acf_fc_layout": "spacing",
+        "spacing_size": "small"
+      },
+      {
+        "acf_fc_layout": "two_col_panel",
+        "reverse": false,
+        "alignment": false,
+        "width": "third",
+        "image_two_col": 3604,
+        "background_colour": null,
+        "border_colour": null,
+        "content_two_col": "<h1><span style=\"color: #003366;\"><strong>How it works</strong></span></h1>\n<h3><span style=\"color: #003366;\">Engagement that earns return visits</span></h3>\n<ul class=\"custom-ticks yellow\">\n<li>Personalised pathways and micro-learning on any device.</li>\n<li>Two-way interactions: questions, choices, reflections, benchmarking.</li>\n<li>Pre, during, post touchpoints so programmes live between events.</li>\n</ul>\n<h3><span style=\"color: #003366;\">Proof you can sell</span></h3>\n<ul class=\"custom-ticks yellow\">\n<li>Live dashboards for engagement, drop-off, and hotspot content.</li>\n<li>Confidence shift and decision splits to show movement, not noise.</li>\n<li>Trendlines across a series so the dataset compounds over time.</li>\n</ul>\n<h3><span style=\"color: #003366;\">Insight that drives decisions</span></h3>\n<ul class=\"custom-ticks yellow\">\n<li>\"Do more of X, less of Y\" backed by evidence.</li>\n<li>Segment cuts when you have the data (specialty, role, region, seniority).</li>\n<li>Search and chat signals that expose unmet needs.</li>\n</ul>\n<h3><span style=\"color: #003366;\">Speed to action</span></h3>\n<ul class=\"custom-ticks yellow\">\n<li>Alerts for low engagement and risk areas.</li>\n<li>Edit, redeploy, measure again, quickly.</li>\n<li>Reuse across channels and markets without rebuilding everything.</li>\n</ul>"
+      },
+      {
+        "acf_fc_layout": "spacing",
+        "spacing_size": "small"
+      },
+      {
+        "acf_fc_layout": "two_col_panel",
+        "reverse": true,
+        "alignment": false,
+        "width": "third",
+        "image_two_col": 3959,
+        "background_colour": null,
+        "border_colour": null,
+        "content_two_col": "<h1><span style=\"color: #003366;\"><strong>Why this matters now</strong></span></h1>\n<ul class=\"custom-ticks yellow\">\n<li>Sponsors are paying for outcomes and defensible reporting.</li>\n<li>Audiences have less time and lower tolerance for passive content.</li>\n<li>Teams need faster iteration cycles, not longer production cycles.</li>\n<li>Proof and insight are now part of commercial renewal.</li>\n</ul>"
+      },
+      {
+        "acf_fc_layout": "spacing",
+        "spacing_size": "medium"
+      },
+      {
+        "acf_fc_layout": "two_col_panel",
+        "reverse": false,
+        "alignment": false,
+        "width": "third",
+        "image_two_col": 3655,
+        "background_colour": null,
+        "border_colour": null,
+        "content_two_col": "<h1><span style=\"color: #ff6600;\">Prove your content works, from learning lift to ROI</span></h1>\n<p>Show sponsors, funders, and internal teams what changed, and what to do next.\nUse the content you already own.</p>\n<p style=\"text-align: center;\"><a class=\"button\" href=\"https://app.apollo.io/#/meet/Matt@Yoke/25-min\">Book a 25-min strategy call</a></p>\n<p style=\"text-align: center;\"><a class=\"button\" href=\"#\">See a proof dashboard</a></p>"
+      },
+      {
+        "acf_fc_layout": "spacing",
+        "spacing_size": "small"
+      },
+      {
+        "acf_fc_layout": "small_cta_banner",
+        "reverse_panel": false,
+        "content_type": "nobutton",
+        "image_cta_small": 2693,
+        "content_cta_small": "<h2><span style=\"color: #f79801;\">Award-winning innovation in healthcare communication and digital learning:\u00a0</span></h2>\r\nBuilt by MedComms and publishing specialists who understand CME, IME, compliance, and commercial innovation.\r\n\r\n<strong><span style=\"color: #f79801;\">BEST USE OF TECHNOLOGY</span>\r\n</strong><span style=\"font-weight: 400;\">Evcom - Excellence in digital and visual communications</span>\r\n\r\n<strong><span style=\"color: #f79801;\">BEST USE OF DIGITAL DATA VISUALIZATION</span>\r\n</strong><span style=\"font-weight: 400;\">Communique\u2019 Awards - Recognising o</span><span style=\"font-weight: 400;\">utstanding healthcare communication innovation</span>\r\n\r\n<strong><span style=\"color: #f79801;\">INTERACTIVE COMMUNICATIONS FOR HEALTHCARE PROFESSIONALS AWARD</span>\r\n</strong><span style=\"font-weight: 400;\">PM Society - </span><span style=\"font-weight: 400;\">Recognizing groundbreaking innovation in digital health communication</span>",
+        "cta_button_small": null,
+        "cta_link_small": null
+      },
+      {
+        "acf_fc_layout": "spacing",
+        "spacing_size": "medium"
+      },
+      {
+        "acf_fc_layout": "testimonial",
+        "testimonials": [
+          {
+            "testimonial": 2497
+          },
+          {
+            "testimonial": 227
+          },
+          {
+            "testimonial": 2966
+          }
+        ]
+      },
+      {
+        "acf_fc_layout": "spacing",
+        "spacing_size": "medium"
+      },
+      {
+        "acf_fc_layout": "content_panel",
+        "alignment": "center",
+        "background_colour": false,
+        "content_block": "<h1><span style=\"color: #000080;\">Prove your content works \u2014 from learning lift to ROI.</span></h1>\r\n<span style=\"color: #000080;\">Show clients, sponsors, and funders measurable learning outcomes, behavioral change, and engagement proof \u2014 all from the content you already own.</span>\r\n\r\n&nbsp;\r\n\r\n<a href=\"https://app.apollo.io/#/meet/Matt@Yoke/25-min\"><strong>Book a 25-min strategy call\u00a0 today</strong></a>\r\n\r\n&nbsp;\r\n\r\n<span style=\"color: #000080;\">See how Yoke delivers personalized, two-way learning, live proof, and new revenue growth \u2014 instantly.</span>"
+      },
+      {
+        "acf_fc_layout": "spacing",
+        "spacing_size": "medium"
+      }
+    ]
+  }
+}

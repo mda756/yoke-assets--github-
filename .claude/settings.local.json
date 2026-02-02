@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.pdfgear.com)",
+      "Bash(powershell -Command \"Invoke-WebRequest -Uri ''https://downloadfiles.pdfgear.com/releases/windows/pdfgear_setup_v2.1.14.exe'' -OutFile ''pdfgear_setup.exe''\")",
+      "Bash(./pdfgear_setup.exe)",
+      "Bash(start \"\" \"claude code creator/YokeDigital_PurchaseOrder 2024.pdf\")",
+      "Bash(pip install:*)",
+      "Bash(python edit_pdf_date.py:*)",
+      "Bash(curl:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(python -c:*)",
+      "WebFetch(domain:yokehealth.com)",
+      "Bash(unzip:*)",
+      "WebFetch(domain:app.apollo.io)",
+      "WebSearch",
+      "Bash(findstr:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(python -m playwright:*)",
+      "Bash(python website_documentation.py:*)",
+      "Bash(python website_documentation_v2.py:*)",
+      "WebFetch(domain:www.yokehealth.com)",
+      "Bash(python website_documentation_final.py:*)",
+      "Bash(start \"\" \"YokeHealth_Website_Documentation.docx\")",
+      "Bash(python website_documentation_lazy_load.py:*)",
+      "WebFetch(domain:miro.com)",
+      "Bash(python:*)",
+      "Bash(ls:*)",
+      "Bash(chmod:*)",
+      "Bash(bash:*)",
+      "Bash(dir:*)",
+      "Bash(playwright install:*)",
+      "Bash(start \"\" \"claude code creator/LINUX_SERVER_SETUP_GUIDE.md\")"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/session-start.sh",
+            "statusMessage": "Loading credentials and workflows..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,303 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\matth> wsl --install -d Ubuntu
+Downloading: Ubuntu
+Installing: Ubuntu
+Distribution successfully installed. It can be launched via 'wsl.exe -d Ubuntu'
+Launching Ubuntu...
+Provisioning the new WSL instance Ubuntu
+This might take a while...
+Create a default Unix user account: mda75
+New password:
+Retype new password:
+Sorry, passwords do not match.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+Try again? [y/N] y
+New password:
+Retype new password:
+passwd: password updated successfully
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+mda75@HWOFFICEPC:/mnt/c/Users/matth$ ssh root@<DROPLET_IP>
+bash: syntax error near unexpected token `newline'
+mda75@HWOFFICEPC:/mnt/c/Users/matth$ ssh root@134.209.186.176
+The authenticity of host '134.209.186.176 (134.209.186.176)' can't be established.
+ED25519 key fingerprint is SHA256:3Tt3mju+ZNxrAcbhLbj1QPxyEHfAGDbzmFLZH8I8sgo.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '134.209.186.176' (ED25519) to the list of known hosts.
+root@134.209.186.176's password:
+Permission denied, please try again.
+root@134.209.186.176's password:
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.8.0-71-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Jan 30 09:27:24 UTC 2026
+
+  System load:  0.0                Processes:             107
+  Usage of /:   11.9% of 23.17GB   Users logged in:       0
+  Memory usage: 20%                IPv4 address for eth0: 134.209.186.176
+  Swap usage:   0%                 IPv4 address for eth0: 10.16.0.5
+
+Expanded Security Maintenance for Applications is not enabled.
+
+14 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Fri Jan 30 09:27:25 2026 from 176.35.63.213
+root@ubuntu-s-1vcpu-1gb-lon1-01:~# sudo reboot
+
+Broadcast message from root@ubuntu-s-1vcpu-1gb-lon1-01 on pts/2 (Fri 2026-01-30 10:02:59 UTC):
+
+The system will reboot now!
+
+root@ubuntu-s-1vcpu-1gb-lon1-01:~# Connection to 134.209.186.176 closed by remote host.
+Connection to 134.209.186.176 closed.
+mda75@HWOFFICEPC:/mnt/c/Users/matth$ ssh root@134.209.186.176
+cd /root/yoke-workspace
+./start-claude.sh
+root@134.209.186.176's password:
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.8.0-90-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Jan 30 10:03:24 UTC 2026
+
+  System load:  0.82               Processes:             102
+  Usage of /:   11.7% of 23.17GB   Users logged in:       0
+  Memory usage: 18%                IPv4 address for eth0: 134.209.186.176
+  Swap usage:   0%                 IPv4 address for eth0: 10.16.0.5
+
+Expanded Security Maintenance for Applications is not enabled.
+
+14 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Jan 30 10:01:27 2026 from 176.35.63.213
+root@ubuntu-s-1vcpu-1gb-lon1-01:~# apt update
+apt upgrade -y
+reboot
+Hit:1 http://mirrors.digitalocean.com/ubuntu noble InRelease
+Hit:2 http://mirrors.digitalocean.com/ubuntu noble-updates InRelease
+Get:3 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:4 http://mirrors.digitalocean.com/ubuntu noble-backports InRelease
+Hit:5 https://deb.nodesource.com/node_24.x nodistro InRelease
+Hit:6 https://repos-droplet.digitalocean.com/apt/droplet-agent main InRelease
+Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.5 kB]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [74.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+Fetched 222 kB in 7s (31.2 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+12 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following NEW packages will be installed:
+  linux-headers-6.8.0-94 linux-headers-6.8.0-94-generic linux-image-6.8.0-94-generic linux-modules-6.8.0-94-generic linux-tools-6.8.0-94
+  linux-tools-6.8.0-94-generic
+The following upgrades have been deferred due to phasing:
+  fwupd libfwupd2
+The following packages will be upgraded:
+  libdrm-common libdrm2 linux-headers-generic linux-headers-virtual linux-image-virtual linux-libc-dev linux-tools-common linux-virtual
+  python3-distupgrade ubuntu-release-upgrader-core
+10 upgraded, 6 newly installed, 0 to remove and 2 not upgraded.
+Need to get 80.7 MB of archives.
+After this operation, 189 MB of additional disk space will be used.
+Get:1 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 libdrm-common all 2.4.125-1ubuntu0.1~24.04.1 [9174 B]
+Get:2 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 libdrm2 amd64 2.4.125-1ubuntu0.1~24.04.1 [41.3 kB]
+Get:3 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 ubuntu-release-upgrader-core all 1:24.04.28 [27.4 kB]
+Get:4 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 python3-distupgrade all 1:24.04.28 [125 kB]
+Get:5 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-headers-6.8.0-94 all 6.8.0-94.96 [14.0 MB]
+Get:6 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-headers-6.8.0-94-generic amd64 6.8.0-94.96 [4163 kB]
+Get:7 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-modules-6.8.0-94-generic amd64 6.8.0-94.96 [39.5 MB]
+Get:8 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-image-6.8.0-94-generic amd64 6.8.0-94.96 [14.8 MB]
+Get:9 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-virtual amd64 6.8.0-94.96 [1694 B]
+Get:10 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-image-virtual amd64 6.8.0-94.96 [11.0 kB]
+Get:11 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-headers-virtual amd64 6.8.0-94.96 [1646 B]
+Get:12 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-headers-generic amd64 6.8.0-94.96 [10.9 kB]
+Get:13 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-94.96 [1932 kB]
+Get:14 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-tools-common all 6.8.0-94.96 [774 kB]
+Get:15 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-tools-6.8.0-94 amd64 6.8.0-94.96 [5433 kB]
+Get:16 http://mirrors.digitalocean.com/ubuntu noble-updates/main amd64 linux-tools-6.8.0-94-generic amd64 6.8.0-94.96 [1808 B]
+Fetched 80.7 MB in 8s (10.3 MB/s)
+(Reading database ... 112484 files and directories currently installed.)
+Preparing to unpack .../00-libdrm-common_2.4.125-1ubuntu0.1~24.04.1_all.deb ...
+Unpacking libdrm-common (2.4.125-1ubuntu0.1~24.04.1) over (2.4.122-1~ubuntu0.24.04.2) ...
+Preparing to unpack .../01-libdrm2_2.4.125-1ubuntu0.1~24.04.1_amd64.deb ...
+Unpacking libdrm2:amd64 (2.4.125-1ubuntu0.1~24.04.1) over (2.4.122-1~ubuntu0.24.04.2) ...
+Preparing to unpack .../02-ubuntu-release-upgrader-core_1%3a24.04.28_all.deb ...
+Unpacking ubuntu-release-upgrader-core (1:24.04.28) over (1:24.04.27) ...
+Preparing to unpack .../03-python3-distupgrade_1%3a24.04.28_all.deb ...
+Unpacking python3-distupgrade (1:24.04.28) over (1:24.04.27) ...
+Selecting previously unselected package linux-headers-6.8.0-94.
+Preparing to unpack .../04-linux-headers-6.8.0-94_6.8.0-94.96_all.deb ...
+Unpacking linux-headers-6.8.0-94 (6.8.0-94.96) ...
+Selecting previously unselected package linux-headers-6.8.0-94-generic.
+Preparing to unpack .../05-linux-headers-6.8.0-94-generic_6.8.0-94.96_amd64.deb ...
+Unpacking linux-headers-6.8.0-94-generic (6.8.0-94.96) ...
+Selecting previously unselected package linux-modules-6.8.0-94-generic.
+Preparing to unpack .../06-linux-modules-6.8.0-94-generic_6.8.0-94.96_amd64.deb ...
+Unpacking linux-modules-6.8.0-94-generic (6.8.0-94.96) ...
+Selecting previously unselected package linux-image-6.8.0-94-generic.
+Preparing to unpack .../07-linux-image-6.8.0-94-generic_6.8.0-94.96_amd64.deb ...
+Unpacking linux-image-6.8.0-94-generic (6.8.0-94.96) ...
+Preparing to unpack .../08-linux-virtual_6.8.0-94.96_amd64.deb ...
+Unpacking linux-virtual (6.8.0-94.96) over (6.8.0-90.91) ...
+Preparing to unpack .../09-linux-image-virtual_6.8.0-94.96_amd64.deb ...
+Unpacking linux-image-virtual (6.8.0-94.96) over (6.8.0-90.91) ...
+Preparing to unpack .../10-linux-headers-virtual_6.8.0-94.96_amd64.deb ...
+Unpacking linux-headers-virtual (6.8.0-94.96) over (6.8.0-90.91) ...
+Preparing to unpack .../11-linux-headers-generic_6.8.0-94.96_amd64.deb ...
+Unpacking linux-headers-generic (6.8.0-94.96) over (6.8.0-90.91) ...
+Preparing to unpack .../12-linux-libc-dev_6.8.0-94.96_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (6.8.0-94.96) over (6.8.0-90.91) ...
+Preparing to unpack .../13-linux-tools-common_6.8.0-94.96_all.deb ...
+Unpacking linux-tools-common (6.8.0-94.96) over (6.8.0-90.91) ...
+Selecting previously unselected package linux-tools-6.8.0-94.
+Preparing to unpack .../14-linux-tools-6.8.0-94_6.8.0-94.96_amd64.deb ...
+Unpacking linux-tools-6.8.0-94 (6.8.0-94.96) ...
+Selecting previously unselected package linux-tools-6.8.0-94-generic.
+Preparing to unpack .../15-linux-tools-6.8.0-94-generic_6.8.0-94.96_amd64.deb ...
+Unpacking linux-tools-6.8.0-94-generic (6.8.0-94.96) ...
+Setting up linux-libc-dev:amd64 (6.8.0-94.96) ...
+Setting up python3-distupgrade (1:24.04.28) ...
+Setting up linux-headers-6.8.0-94 (6.8.0-94.96) ...
+Setting up linux-headers-6.8.0-94-generic (6.8.0-94.96) ...
+Setting up ubuntu-release-upgrader-core (1:24.04.28) ...
+Setting up libdrm-common (2.4.125-1ubuntu0.1~24.04.1) ...
+Setting up linux-tools-common (6.8.0-94.96) ...
+Setting up linux-modules-6.8.0-94-generic (6.8.0-94.96) ...
+Setting up linux-image-6.8.0-94-generic (6.8.0-94.96) ...
+I: /boot/vmlinuz.old is now a symlink to vmlinuz-6.8.0-90-generic
+I: /boot/initrd.img.old is now a symlink to initrd.img-6.8.0-90-generic
+I: /boot/vmlinuz is now a symlink to vmlinuz-6.8.0-94-generic
+I: /boot/initrd.img is now a symlink to initrd.img-6.8.0-94-generic
+Setting up linux-tools-6.8.0-94 (6.8.0-94.96) ...
+Setting up linux-headers-generic (6.8.0-94.96) ...
+Setting up linux-tools-6.8.0-94-generic (6.8.0-94.96) ...
+Setting up libdrm2:amd64 (2.4.125-1ubuntu0.1~24.04.1) ...
+Setting up linux-image-virtual (6.8.0-94.96) ...
+Setting up linux-headers-virtual (6.8.0-94.96) ...
+Setting up linux-virtual (6.8.0-94.96) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.6) ...
+Processing triggers for linux-image-6.8.0-94-generic (6.8.0-94.96) ...
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-6.8.0-94-generic
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/50-cloudimg-settings.cfg'
+Sourcing file `/etc/default/grub.d/51-legacy-ifnames.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-6.8.0-94-generic
+Found initrd image: /boot/initrd.img-6.8.0-94-generic
+Found linux image: /boot/vmlinuz-6.8.0-90-generic
+Found initrd image: /boot/initrd.img-6.8.0-90-generic
+Found linux image: /boot/vmlinuz-6.8.0-71-generic
+Found initrd image: /boot/initrd.img-6.8.0-71-generic
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+Scanning processes...
+Scanning linux images...
+
+Pending kernel upgrade!
+Running kernel version:
+  6.8.0-90-generic
+Diagnostics:
+  The currently running kernel version is not the expected kernel version 6.8.0-94-generic.
+
+Restarting the system to load the new kernel will not be handled automatically, so you should consider rebooting.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@ubuntu-s-1vcpu-1gb-lon1-01:~# Connection to 134.209.186.176 closed by remote host.
+Connection to 134.209.186.176 closed.
+bash: cd: /root/yoke-workspace: Permission denied
+bash: ./start-claude.sh: No such file or directory
+mda75@HWOFFICEPC:/mnt/c/Users/matth$ ssh root@134.209.186.176 cd /root/yoke-workspace ./start-claude.sh
+root@134.209.186.176's password:
+bash: line 1: cd: too many arguments
+mda75@HWOFFICEPC:/mnt/c/Users/matth$ Digitalocan 2025Rootpassword75X
+Digitalocan: command not found
+mda75@HWOFFICEPC:/mnt/c/Users/matth$ ssh root@134.209.186.176 'cd /root/yoke-workspace && ./start-claude.sh'
+root@134.209.186.176's password:
+bash: line 1: ./start-claude.sh: No such file or directory
+mda75@HWOFFICEPC:/mnt/c/Users/matth$ ssh root@134.209.186.176
+root@134.209.186.176's password:
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.8.0-94-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Jan 30 10:09:50 UTC 2026
+
+  System load:  0.16               Processes:             99
+  Usage of /:   12.6% of 23.17GB   Users logged in:       0
+  Memory usage: 16%                IPv4 address for eth0: 134.209.186.176
+  Swap usage:   0%                 IPv4 address for eth0: 10.16.0.5
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Jan 30 10:03:25 2026 from 176.35.63.213
+root@ubuntu-s-1vcpu-1gb-lon1-01:~# cd /root/yoke-workspace
+./start-claude.sh
+-bash: ./start-claude.sh: No such file or directory
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/yoke-workspace# cd /root/yoke-workspace
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/yoke-workspace# ./start-claude.sh
+-bash: ./start-claude.sh: No such file or directory
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/yoke-workspace# pwd
+ls -la
+/root/yoke-workspace
+total 12
+drwxr-xr-x 3 root root 4096 Jan 30 09:28 .
+drwx------ 8 root root 4096 Jan 30 09:25 ..
+drwxr-xr-x 2 root root 4096 Jan 29 19:02 claude-code-creator
+-rw-r--r-- 1 root root    0 Jan 30 09:28 ssh
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/yoke-workspace# find /root -maxdepth 4 -name "start-claude.sh" -type f 2>/dev/null
+/root/start-claude.sh
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/yoke-workspace# bash /root/yoke-workspace/start-claude.sh
+bash: /root/yoke-workspace/start-claude.sh: No such file or directory
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/yoke-workspace# bash /root/start-claude.sh
+Starting new Claude Code session...
+[exited]
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/yoke-workspace# ^C
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/yoke-workspace# ^C
+root@ubuntu-s-1vcpu-1gb-lon1-01:~/yoke-workspace#

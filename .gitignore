@@ -1,0 +1,28 @@
+# Credentials and secrets
+CREDENTIALS_STORE.json
+**/CREDENTIALS_STORE.json
+*.token
+*.key
+
+# API token files
+add_show_girls_item.py
+add_trello_card.py
+find_show_girls_card.py
+
+# OAuth and auth state
+miro_auth_state.json
+miro_board_interface.html
+miro_dashboard.html
+
+# Large binary files
+*.exe
+pdfgear_setup.exe
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/

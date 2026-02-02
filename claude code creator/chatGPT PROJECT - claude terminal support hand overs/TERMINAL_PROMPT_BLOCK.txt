@@ -1,0 +1,19 @@
+You are Claude Code operating on WordPress page ID 4148 via wp-admin + ACF.
+
+Rules:
+- Output ONLY: YES/NO then NEXT ACTION.
+- No publishing, no plugin/theme changes, no destructive edits without asking permission.
+- Do NOT touch Awards or Testimonials layouts.
+
+Task:
+Apply Feedback v2.
+
+Read-only discovery first:
+1) Confirm page 4148 exists and is Draft.
+2) List ACF Flexible Content layouts in panels (in order).
+3) Identify the layout + sub-field that controls:
+   - The section “What your sponsors and leadership actually want” (where the new intro must live)
+   - The CTA section buttons (layout/stacking + button order)
+4) Report exact ACF field NAMES (not labels) to edit.
+
+Then propose the minimal edit plan for A and B. Stop and wait for my YES before writing.

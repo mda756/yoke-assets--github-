@@ -1,0 +1,73 @@
+{
+  "icp_schema": {
+    "id": "string (unique identifier)",
+    "name": "string (e.g., 'Healthcare SaaS Founders')",
+    "created_date": "ISO date",
+    "status": "active|archived",
+    "criteria": {
+      "job_titles": ["array of strings"],
+      "industries": ["array of strings"],
+      "company_size": "string",
+      "location": ["array of strings"],
+      "technologies": ["array of strings"],
+      "pain_points": ["array of strings"],
+      "buying_signals": ["array of strings"]
+    },
+    "messaging": {
+      "value_proposition": "string",
+      "key_benefits": ["array of strings"],
+      "use_cases": ["array of strings"]
+    },
+    "apollo_filters": {
+      "saved_search_id": "string (optional)",
+      "filter_json": "object (Apollo API filters)"
+    }
+  },
+  "client_schema": {
+    "id": "string (unique identifier)",
+    "source_icp_id": "string (references ICP)",
+    "created_date": "ISO date",
+    "status": "prospect|qualified|negotiation|client|closed_lost",
+    "contact": {
+      "name": "string",
+      "email": "string",
+      "phone": "string (optional)",
+      "company": "string",
+      "job_title": "string",
+      "linkedin": "string (optional)"
+    },
+    "apollo_data": {
+      "person_id": "string (optional)",
+      "organization_id": "string (optional)",
+      "sequence_id": "string (optional)",
+      "last_contacted": "ISO date (optional)"
+    },
+    "engagement": {
+      "landing_page_url": "string (optional)",
+      "landing_page_visited": "boolean",
+      "emails_sent": "number",
+      "emails_opened": "number",
+      "last_activity": "ISO date"
+    },
+    "notes": ["array of strings"]
+  },
+  "landing_page_schema": {
+    "id": "string (unique identifier)",
+    "client_id": "string (references client)",
+    "icp_id": "string (references ICP)",
+    "created_date": "ISO date",
+    "template_used": "string",
+    "personalization": {
+      "company_name": "string",
+      "industry": "string",
+      "pain_points_addressed": ["array of strings"],
+      "custom_sections": ["array of objects"]
+    },
+    "wordpress_page_id": "string (optional)",
+    "url": "string",
+    "analytics": {
+      "visits": "number",
+      "conversions": "number"
+    }
+  }
+}
