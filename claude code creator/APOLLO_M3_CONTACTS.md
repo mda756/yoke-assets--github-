@@ -211,7 +211,7 @@ M3 competes with:
 - [ ] LinkedIn outreach coordinated
 
 ### Scheduled Tasks
-- [ ] **2026-02-03 13:00 GMT** - Apollo test for the 2nd/26th - Test Apollo integration and functionality (Todoist ID: 9978535175)
+- [ ] **2026-02-03 13:00 GMT** - test claude second of the second 2026 (Apollo Task ID: 6980fb35629bbc0015171921, Contact: Digital Droplet Test)
 
 ---
 
