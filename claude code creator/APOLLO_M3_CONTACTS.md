@@ -210,6 +210,9 @@ M3 competes with:
 - [ ] Follow-up cadence defined (Day 1, 5, 10)
 - [ ] LinkedIn outreach coordinated
 
+### Scheduled Tasks
+- [ ] **2026-02-03 13:00 GMT** - Apollo test for the 2nd/26th - Test Apollo integration and functionality (Todoist ID: 9978535175)
+
 ---
 
 ## Success Metrics
