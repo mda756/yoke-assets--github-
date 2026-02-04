@@ -1,0 +1,60 @@
+
+═══════════════════════════════════════════════════════════
+         NEW LAPTOP SETUP - QUICK CHECKLIST
+═══════════════════════════════════════════════════════════
+
+□ 1. Copy "startup-deployment  on other laptops" folder
+     to new laptop
+
+□ 2. Double-click: SIMPLE-ONE-CLICK-INSTALL.bat
+
+□ 3. Click YES when Windows asks for permission
+
+□ 4. Wait for installation (window shows progress)
+     ⏱ Takes about 3-5 minutes total
+
+□ 5. Restart the laptop
+
+□ 6. After restart - sign in to:
+     □ GitHub Desktop (one-time)
+     □ Tailscale (if needed)
+
+═══════════════════════════════════════════════════════════
+                         DONE!
+═══════════════════════════════════════════════════════════
+
+
+WHAT GETS INSTALLED:
+────────────────────────────────────────────────────────────
+✓ Tailscale VPN (if not already installed)
+✓ GitHub Desktop (if not already installed)
+✓ Git configuration (matt@Yokehealth.com)
+✓ Auto-startup apps
+
+
+AFTER FIRST RESTART:
+────────────────────────────────────────────────────────────
+These will open automatically:
+  • GitHub Desktop
+  • Tailscale
+  • PowerShell window
+
+
+FILE TO RUN:
+────────────────────────────────────────────────────────────
+  📄 SIMPLE-ONE-CLICK-INSTALL.bat  ← Double-click this!
+
+
+TROUBLESHOOTING:
+────────────────────────────────────────────────────────────
+❌ Window closes immediately?
+   → Right-click .bat file → Run as administrator
+
+❌ Installation fails?
+   → Script will show which failed
+   → Install manually from websites
+
+❌ Nothing happens?
+   → Make sure Windows didn't block the file
+   → Right-click → Properties → Unblock → Apply
+

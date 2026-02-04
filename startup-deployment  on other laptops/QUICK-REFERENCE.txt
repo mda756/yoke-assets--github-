@@ -1,0 +1,137 @@
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                          ┃
+┃         QUICK REFERENCE - PC DEPLOYMENT                  ┃
+┃                                                          ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+═══════════════════════════════════════════════════════════
+ YOUR CONFIGURATION
+═══════════════════════════════════════════════════════════
+
+Git Username: mda756
+Git Email:    matt@Yokehealth.com
+Tailscale:    tailcfadb3.ts.net
+
+
+═══════════════════════════════════════════════════════════
+ YOUR DEVICES ON TAILSCALE
+═══════════════════════════════════════════════════════════
+
+✓ hwofficepc           (100.104.203.5) - THIS PC
+  laptop-8oqjlnc8      (100.81.162.101)
+  lenovo-2025          (100.77.138.60)
+  samsung-sm-s918b     (100.105.128.16)
+  yokeclaudedroplet    (100.125.35.93)
+
+
+═══════════════════════════════════════════════════════════
+ DEPLOYMENT CHEAT SHEET
+═══════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────┐
+│ FIRST TIME (on main PC):                                │
+└─────────────────────────────────────────────────────────┘
+  1. Open: GET-AUTH-KEY.txt
+  2. Follow instructions to generate Tailscale key
+  3. Save key in "auth-key.txt"
+
+
+┌─────────────────────────────────────────────────────────┐
+│ ON EACH NEW LAPTOP:                                     │
+└─────────────────────────────────────────────────────────┘
+  1. Copy entire "startup-deployment" folder
+  2. Double-click: INSTALL-ON-NEW-PC.bat
+  3. Wait 5 minutes
+  4. Restart laptop
+  5. Done!
+
+
+┌─────────────────────────────────────────────────────────┐
+│ WHAT FILES TO USE:                                      │
+└─────────────────────────────────────────────────────────┘
+
+  EASIEST METHOD:
+  ▶ INSTALL-ON-NEW-PC.bat
+    (Just double-click, no right-click needed!)
+
+  ALTERNATIVE:
+  ▶ AUTO-SETUP-WITH-PROMPTS.ps1
+    (Right-click → Run as Administrator)
+
+  ADVANCED:
+  ▶ DEPLOY-COMPLETE-SETUP.ps1
+    (Pre-configure auth key for silent install)
+
+
+┌─────────────────────────────────────────────────────────┐
+│ TROUBLESHOOTING:                                        │
+└─────────────────────────────────────────────────────────┘
+
+  ❌ Script won't run
+  → Right-click script → Run as Administrator
+  → Or use INSTALL-ON-NEW-PC.bat
+
+  ❌ Tailscale won't connect
+  → Make sure auth-key.txt exists in folder
+  → Or sign in manually from system tray
+
+  ❌ GitHub Desktop needs login
+  → Normal! Sign in once, it remembers
+
+  ❌ Nothing auto-starts
+  → Restart PC completely (not just logout)
+
+
+┌─────────────────────────────────────────────────────────┐
+│ MANUAL COMMANDS (if needed):                            │
+└─────────────────────────────────────────────────────────┘
+
+  Connect Tailscale manually:
+  > tailscale up
+
+  Check Tailscale status:
+  > tailscale status
+
+  Login to GitHub CLI:
+  > gh auth login
+
+  View startup folder:
+  > Win+R, type: shell:startup
+
+
+┌─────────────────────────────────────────────────────────┐
+│ WHAT INSTALLS:                                          │
+└─────────────────────────────────────────────────────────┘
+
+  ✓ Tailscale 1.94.1+
+  ✓ GitHub Desktop (latest)
+  ✓ GitHub CLI (latest)
+  ✓ Git (configured with your details)
+  ✓ Auto-startup launcher
+
+
+┌─────────────────────────────────────────────────────────┐
+│ AUTO-START ON LOGIN:                                    │
+└─────────────────────────────────────────────────────────┘
+
+  • GitHub Desktop → Opens automatically
+  • Tailscale → Connects automatically
+  • PowerShell → New window opens
+
+
+┌─────────────────────────────────────────────────────────┐
+│ DEPLOYMENT TIME:                                        │
+└─────────────────────────────────────────────────────────┘
+
+  Initial setup (first PC):      2 minutes
+  Per laptop deployment:         5-7 minutes
+  Manual steps after:            1 minute (GitHub sign-in)
+  Total per laptop:              ~8 minutes
+
+
+═══════════════════════════════════════════════════════════
+
+Print this file and keep it handy when setting up laptops!
+

@@ -1,0 +1,159 @@
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                          ┃
+┃              ⚡ ULTRA-QUICK START GUIDE ⚡              ┃
+┃                                                          ┃
+┃         Set up unlimited Windows laptops in              ┃
+┃         8 minutes each - completely automatic!           ┃
+┃                                                          ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+╔══════════════════════════════════════════════════════════╗
+║  STEP 1: First-Time Setup (Do Once - 2 Minutes)         ║
+╚══════════════════════════════════════════════════════════╝
+
+    ON THIS PC (hwofficepc):
+
+    1. Open file: GET-AUTH-KEY.txt
+
+    2. Browser will open to Tailscale admin
+
+    3. Click "Generate auth key"
+
+    4. Settings:
+       ✓ Check "Reusable"
+       ✓ Check "Preauthorized"
+
+    5. Copy the key (starts with "tskey-")
+
+    6. Save as "auth-key.txt" in this folder
+
+    ✅ Done! You're ready to deploy!
+
+
+╔══════════════════════════════════════════════════════════╗
+║  STEP 2: Deploy to New Laptop (Repeat - 8 Minutes Each) ║
+╚══════════════════════════════════════════════════════════╝
+
+    ON EACH NEW LAPTOP:
+
+    1. Copy entire "startup-deployment" folder
+       (USB / OneDrive / Email / Network)
+
+    2. Double-click: INSTALL-ON-NEW-PC.bat
+       ┌────────────────────────────┐
+       │ INSTALL-ON-NEW-PC.bat      │
+       └────────────────────────────┘
+       (Just double-click, that's it!)
+
+    3. Click "Yes" when it asks for Admin
+
+    4. Wait 5-7 minutes
+       (Coffee break! ☕)
+
+    5. Restart laptop
+
+    6. GitHub Desktop opens → Sign in (one-time)
+
+    ✅ Done! This laptop is fully configured!
+
+
+╔══════════════════════════════════════════════════════════╗
+║  What Gets Installed & Configured                        ║
+╚══════════════════════════════════════════════════════════╝
+
+    ✓ Tailscale ──────────► Auto-connects to your VPN
+    ✓ GitHub Desktop ─────► Ready for repos
+    ✓ GitHub CLI ─────────► Command-line tool
+    ✓ Git ───────────────► Pre-configured (mda756)
+    ✓ Auto-Startup ───────► Launches on every login
+
+
+╔══════════════════════════════════════════════════════════╗
+║  After Installation, Every Time You Log In:              ║
+╚══════════════════════════════════════════════════════════╝
+
+    → GitHub Desktop launches automatically
+    → Tailscale connects automatically
+    → PowerShell window opens automatically
+
+    No manual steps needed!
+
+
+╔══════════════════════════════════════════════════════════╗
+║  Your Target Laptops                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+    Ready to deploy to:
+    □ laptop-8oqjlnc8
+    □ lenovo-2025
+    □ Any other Windows 10/11 PC
+
+
+╔══════════════════════════════════════════════════════════╗
+║  Troubleshooting (If Something Goes Wrong)               ║
+╚══════════════════════════════════════════════════════════╝
+
+    ❌ Script won't run?
+       → Right-click INSTALL-ON-NEW-PC.bat
+       → Select "Run as Administrator"
+
+    ❌ Tailscale won't connect?
+       → Make sure auth-key.txt is in the folder
+       → Or sign in manually from system tray
+
+    ❌ Need more help?
+       → Open: QUICK-REFERENCE.txt
+
+
+╔══════════════════════════════════════════════════════════╗
+║  Pro Tips                                                ║
+╚══════════════════════════════════════════════════════════╝
+
+    💡 Got multiple laptops? Deploy them in parallel!
+       Start the installer on all laptops at once.
+
+    💡 Package is tiny (101 KB) - easy to distribute!
+
+    💡 Safe to re-run if something fails!
+
+    💡 Works on Windows 10 and Windows 11!
+
+
+╔══════════════════════════════════════════════════════════╗
+║  Files You Need to Know                                  ║
+╚══════════════════════════════════════════════════════════╝
+
+    For Documentation:
+    📖 → QUICK-START-GUIDE.txt (this file)
+    📖 00-READ-ME-FIRST.txt (complete docs)
+    📖 QUICK-REFERENCE.txt (troubleshooting)
+
+    To Run:
+    ⚡ INSTALL-ON-NEW-PC.bat (main installer)
+    🔑 GET-AUTH-KEY.txt (get Tailscale key first)
+
+
+╔══════════════════════════════════════════════════════════╗
+║  Ready to Start?                                         ║
+╚══════════════════════════════════════════════════════════╝
+
+    Your checklist:
+    □ Read GET-AUTH-KEY.txt (2 minutes)
+    □ Generate and save auth key
+    □ Copy folder to first laptop
+    □ Run INSTALL-ON-NEW-PC.bat
+    □ Deploy to remaining laptops
+
+    Location: C:\Users\matth\startup-deployment\
+
+
+═══════════════════════════════════════════════════════════
+
+            That's it! Super simple. 🚀
+
+        Questions? Open 00-READ-ME-FIRST.txt
+
+═══════════════════════════════════════════════════════════
+

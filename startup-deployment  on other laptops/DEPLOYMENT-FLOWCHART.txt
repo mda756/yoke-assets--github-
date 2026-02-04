@@ -1,0 +1,221 @@
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                      DEPLOYMENT FLOWCHART                             ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                         🖥️  MAIN PC (ONE TIME)                       │
+└─────────────────────────────────────────────────────────────────────┘
+
+                              START
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │  Open GET-AUTH-KEY.txt│
+                    └───────────┬───────────┘
+                                │
+                                ▼
+                    ┌───────────────────────────────┐
+                    │ Go to Tailscale Admin Console │
+                    │ https://login.tailscale.com   │
+                    └───────────┬───────────────────┘
+                                │
+                                ▼
+                    ┌───────────────────────────┐
+                    │  Generate Auth Key        │
+                    │  • Click "Generate"       │
+                    │  • Check "Reusable"       │
+                    │  • Check "Preauthorized"  │
+                    └───────────┬───────────────┘
+                                │
+                                ▼
+                    ┌───────────────────────────┐
+                    │  Copy Key (starts with    │
+                    │  "tskey-auth-...")        │
+                    └───────────┬───────────────┘
+                                │
+                                ▼
+                    ┌───────────────────────────┐
+                    │  Save to auth-key.txt     │
+                    │  in deployment folder     │
+                    └───────────┬───────────────┘
+                                │
+                                ▼
+                    ┌───────────────────────────┐
+                    │  Copy entire folder to:   │
+                    │  • USB drive              │
+                    │  • Cloud storage          │
+                    │  • Network share          │
+                    └───────────┬───────────────┘
+                                │
+                                ▼
+                        READY TO DEPLOY!
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                      💻  NEW LAPTOP (EACH PC)                        │
+└─────────────────────────────────────────────────────────────────────┘
+
+                              START
+                                │
+                                ▼
+                    ┌───────────────────────────┐
+                    │  Copy deployment folder   │
+                    │  to new laptop            │
+                    └───────────┬───────────────┘
+                                │
+                                ▼
+                    ┌───────────────────────────┐
+                    │  Double-click:            │
+                    │  INSTALL-ON-NEW-PC.bat    │
+                    └───────────┬───────────────┘
+                                │
+                                ▼
+                    ┌───────────────────────────┐
+                    │  Script runs as Admin     │
+                    │  (asks for permission)    │
+                    └───────────┬───────────────┘
+                                │
+                ┌───────────────┴───────────────┐
+                │                               │
+                ▼                               ▼
+    ┌───────────────────┐         ┌────────────────────┐
+    │ Auth key in       │         │ No auth-key.txt    │
+    │ auth-key.txt?     │         │ found              │
+    └─────┬─────────────┘         └────────┬───────────┘
+          │                                 │
+          │                                 ▼
+          │                     ┌───────────────────────┐
+          │                     │ Script prompts:       │
+          │                     │ "Paste auth key"      │
+          │                     └───────────┬───────────┘
+          │                                 │
+          └─────────────┬───────────────────┘
+                        │
+                        ▼
+        ┌───────────────────────────────────┐
+        │  AUTO-INSTALLATION BEGINS         │
+        │  (Takes 5-7 minutes)              │
+        └───────────┬───────────────────────┘
+                    │
+        ┌───────────┴───────────────┐
+        │                           │
+        ▼                           ▼
+┌───────────────┐         ┌──────────────────┐
+│ Install       │         │ Install GitHub   │
+│ Tailscale     │         │ Desktop + CLI    │
+└───────┬───────┘         └────────┬─────────┘
+        │                          │
+        ▼                          ▼
+┌───────────────┐         ┌──────────────────┐
+│ Connect to    │         │ Configure Git:   │
+│ Tailscale     │         │ • Name: mda756   │
+│ network       │         │ • Email: matt@.. │
+└───────┬───────┘         └────────┬─────────┘
+        │                          │
+        └──────────┬───────────────┘
+                   │
+                   ▼
+       ┌───────────────────────┐
+       │ Setup Auto-Startup:   │
+       │ • GitHub Desktop      │
+       │ • Tailscale           │
+       │ • PowerShell          │
+       └───────────┬───────────┘
+                   │
+                   ▼
+       ┌───────────────────────┐
+       │ INSTALLATION COMPLETE!│
+       └───────────┬───────────┘
+                   │
+                   ▼
+       ┌───────────────────────┐
+       │ Restart Laptop        │
+       └───────────┬───────────┘
+                   │
+                   ▼
+       ┌───────────────────────────┐
+       │ On First Login:           │
+       │ • GitHub Desktop opens    │
+       │ • Click "Sign in"         │
+       │ • Authorize in browser    │
+       │ • Done!                   │
+       └───────────┬───────────────┘
+                   │
+                   ▼
+       ┌───────────────────────────┐
+       │ ✓ FULLY CONFIGURED PC     │
+       │                           │
+       │ Everything auto-starts    │
+       │ on every future login!    │
+       └───────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                           TIMELINE                                   │
+└─────────────────────────────────────────────────────────────────────┘
+
+  Main PC Setup (One Time):
+  ├─ Get auth key: 30 seconds
+  ├─ Copy to USB/cloud: 1 minute
+  └─ Total: ~2 minutes
+
+  Per Laptop Deployment:
+  ├─ Copy folder: 1 minute
+  ├─ Run installer: 5-7 minutes
+  ├─ Restart: 1 minute
+  ├─ GitHub sign-in: 1 minute
+  └─ Total: ~8-10 minutes per laptop
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                      PARALLEL DEPLOYMENT                             │
+└─────────────────────────────────────────────────────────────────────┘
+
+  Got multiple laptops? Do them all at once!
+
+  laptop-8oqjlnc8 ──┐
+                    ├─► Copy folder to each
+  lenovo-2025   ────┤
+                    └─► Run INSTALL-ON-NEW-PC.bat on each
+  laptop-xyz    ────┘
+
+  All installs run in parallel = Same 8-10 minutes!
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                         SUCCESS INDICATORS                           │
+└─────────────────────────────────────────────────────────────────────┘
+
+  After Installation:
+  ✓ Tailscale tray icon shows green
+  ✓ Can ping other Tailscale devices (100.x.x.x)
+  ✓ GitHub Desktop opens and shows repos
+  ✓ PowerShell: "git --version" works
+  ✓ PowerShell: "gh --version" works
+
+  After Restart:
+  ✓ GitHub Desktop auto-launches
+  ✓ Tailscale auto-connects
+  ✓ PowerShell window opens
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                      ROLLBACK / UNINSTALL                            │
+└─────────────────────────────────────────────────────────────────────┘
+
+  Need to remove everything?
+
+  1. Uninstall Programs:
+     • Settings → Apps → Uninstall Tailscale
+     • Settings → Apps → Uninstall GitHub Desktop
+
+  2. Remove Auto-Startup:
+     • Win+R → type "shell:startup"
+     • Delete: startup-apps.ps1 and startup-apps.vbs
+
+  3. Clean Git Config (optional):
+     • PowerShell: git config --global --unset user.name
+     • PowerShell: git config --global --unset user.email
+

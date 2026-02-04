@@ -1,0 +1,62 @@
+
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║              ★  START HERE  ★                            ║
+║                                                           ║
+║         EASIEST WAY TO SET UP NEW LAPTOPS                ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+
+┌───────────────────────────────────────────────────────────┐
+│  ON THIS PC (MAIN PC) - DO THIS FIRST:                   │
+└───────────────────────────────────────────────────────────┘
+
+    Right-click: 1-GENERATE-TAILSCALE-KEY.ps1
+    Select: "Run with PowerShell"
+
+    (This creates an auth key for your other PCs)
+
+
+┌───────────────────────────────────────────────────────────┐
+│  ON NEW LAPTOPS - DO THIS:                                │
+└───────────────────────────────────────────────────────────┘
+
+    1. Copy this entire folder to the new laptop
+
+    2. Right-click: AUTO-SETUP-WITH-PROMPTS.ps1
+       Select: "Run as Administrator"
+
+    3. Follow the prompts
+
+    4. Done! Restart the laptop
+
+
+┌───────────────────────────────────────────────────────────┐
+│  THAT'S IT!                                               │
+└───────────────────────────────────────────────────────────┘
+
+Everything installs automatically:
+  ✓ Tailscale (connects to your network)
+  ✓ GitHub Desktop
+  ✓ Git configuration
+  ✓ Auto-startup (runs on login)
+
+
+┌───────────────────────────────────────────────────────────┐
+│  WHICH SCRIPT TO USE ON NEW LAPTOPS?                      │
+└───────────────────────────────────────────────────────────┘
+
+Use: AUTO-SETUP-WITH-PROMPTS.ps1  ← RECOMMENDED (easier)
+     • Walks you through everything
+     • Prompts for auth key if needed
+     • More beginner-friendly
+
+Or:  DEPLOY-COMPLETE-SETUP.ps1
+     • Pre-configure the auth key first
+     • Runs completely silent
+     • Faster for bulk deployment
+
+
+Need help? Open: SIMPLE-INSTRUCTIONS.txt
+

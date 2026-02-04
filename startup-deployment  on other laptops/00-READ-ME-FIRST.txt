@@ -1,0 +1,220 @@
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║                    ★★★  READ THIS FIRST  ★★★                         ║
+║                                                                       ║
+║              COMPLETE PC SETUP - DEPLOYMENT PACKAGE                   ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+
+This package will automatically set up ANY Windows PC with:
+  ✓ Tailscale (connects to your VPN network)
+  ✓ GitHub Desktop (for code management)
+  ✓ Git (configured with your credentials)
+  ✓ Auto-startup launcher (runs programs on login)
+
+
+═══════════════════════════════════════════════════════════════════════
+ 🚀 SUPER QUICK START (Just 2 steps!)
+═══════════════════════════════════════════════════════════════════════
+
+STEP 1: Get Tailscale Auth Key (ONE TIME)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  On THIS PC (your main computer):
+  ▶ Open: GET-AUTH-KEY.txt
+  ▶ Follow instructions (takes 30 seconds)
+  ▶ Save the key in this folder as "auth-key.txt"
+
+
+STEP 2: Deploy to Other PCs (EACH NEW PC)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Copy this folder to new PC, then:
+  ▶ Double-click: INSTALL-ON-NEW-PC.bat
+  ▶ Wait 5 minutes
+  ▶ Restart
+  ▶ Done!
+
+
+═══════════════════════════════════════════════════════════════════════
+ 📁 WHICH FILES DO WHAT?
+═══════════════════════════════════════════════════════════════════════
+
+┌───────────────────────────────────────────────────────────────────┐
+│  📖 DOCUMENTATION (Read these)                                    │
+└───────────────────────────────────────────────────────────────────┘
+  ★ START-HERE.txt           ← Quick overview
+  00-READ-ME-FIRST.txt       ← This file
+  GET-AUTH-KEY.txt           ← How to get Tailscale key
+  QUICK-REFERENCE.txt        ← Cheat sheet (print this!)
+  SIMPLE-INSTRUCTIONS.txt    ← Detailed guide
+
+┌───────────────────────────────────────────────────────────────────┐
+│  🚀 INSTALLATION FILES (Run these)                                │
+└───────────────────────────────────────────────────────────────────┘
+  INSTALL-ON-NEW-PC.bat      ← EASIEST! Just double-click
+  AUTO-SETUP-WITH-PROMPTS.ps1 ← Interactive installer
+  DEPLOY-COMPLETE-SETUP.ps1  ← Silent installer (advanced)
+  1-GENERATE-TAILSCALE-KEY.ps1 ← Key generator (optional)
+
+┌───────────────────────────────────────────────────────────────────┐
+│  ⚙️ SYSTEM FILES (Don't run these directly)                       │
+└───────────────────────────────────────────────────────────────────┘
+  startup-apps.ps1           ← Auto-startup script
+  startup-apps.vbs           ← Silent launcher
+  install-startup.ps1        ← Startup installer (old version)
+
+
+═══════════════════════════════════════════════════════════════════════
+ 🎯 RECOMMENDED METHOD (Easiest!)
+═══════════════════════════════════════════════════════════════════════
+
+  FOR NEW LAPTOPS:
+  1. Copy this folder to USB drive / cloud storage
+  2. Paste folder on new laptop
+  3. Double-click: INSTALL-ON-NEW-PC.bat
+  4. Follow prompts (paste auth key if asked)
+  5. Restart laptop
+  6. Sign into GitHub Desktop when it opens
+  7. Done!
+
+
+═══════════════════════════════════════════════════════════════════════
+ ⚡ WHAT HAPPENS AFTER INSTALLATION?
+═══════════════════════════════════════════════════════════════════════
+
+IMMEDIATELY:
+  • Tailscale connects to your network (100.x.x.x IP address)
+  • GitHub Desktop is ready to use
+  • Git is configured (your name/email already set)
+
+ON EVERY LOGIN:
+  • GitHub Desktop launches automatically
+  • Tailscale connects automatically
+  • PowerShell window opens automatically
+
+
+═══════════════════════════════════════════════════════════════════════
+ 🔧 YOUR CURRENT CONFIGURATION
+═══════════════════════════════════════════════════════════════════════
+
+  Git Username:     mda756
+  Git Email:        matt@Yokehealth.com
+  Tailscale Network: tailcfadb3.ts.net
+  Main PC:          hwofficepc (100.104.203.5)
+
+  Other Devices:
+    • laptop-8oqjlnc8 (100.81.162.101)
+    • lenovo-2025 (100.77.138.60)
+    • samsung-sm-s918b (phone)
+    • yokeclaudedroplet (server)
+
+
+═══════════════════════════════════════════════════════════════════════
+ ❓ FREQUENTLY ASKED QUESTIONS
+═══════════════════════════════════════════════════════════════════════
+
+Q: Do I need to download anything first?
+A: No! The scripts download everything automatically.
+
+Q: Do I need Administrator rights?
+A: Yes, but the scripts request this automatically.
+
+Q: Will this work on Windows 10 and 11?
+A: Yes, both versions.
+
+Q: Can I use this on multiple laptops?
+A: Yes! That's exactly what it's designed for.
+
+Q: What if I don't have the auth key yet?
+A: The script will prompt you, or connect manually later.
+
+Q: Does this store my passwords?
+A: No. GitHub Desktop asks for login the first time.
+
+Q: Can I customize what installs?
+A: Yes, edit the PowerShell scripts to add/remove programs.
+
+Q: What if something fails?
+A: The script shows errors. Usually safe to re-run.
+
+
+═══════════════════════════════════════════════════════════════════════
+ 🛠️ ADVANCED OPTIONS
+═══════════════════════════════════════════════════════════════════════
+
+Pre-configure auth key for silent deployment:
+  1. Edit: DEPLOY-COMPLETE-SETUP.ps1
+  2. Find line: $TAILSCALE_AUTH_KEY = "PASTE..."
+  3. Replace with your actual key
+  4. Now runs completely silent!
+
+Add more programs to auto-install:
+  1. Edit: AUTO-SETUP-WITH-PROMPTS.ps1
+  2. Add more winget install commands
+  3. Examples:
+     winget install --id Microsoft.PowerToys
+     winget install --id Microsoft.VisualStudioCode
+
+Change what auto-starts on login:
+  1. Edit: startup-apps.ps1
+  2. Add more Start-Process commands
+
+
+═══════════════════════════════════════════════════════════════════════
+ 📞 TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════
+
+ISSUE: "Running scripts is disabled on this system"
+FIX:  Run this in PowerShell as Administrator:
+      Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+ISSUE: Tailscale won't connect
+FIX:  Click system tray icon → Sign in manually
+
+ISSUE: GitHub Desktop won't sign in
+FIX:  Normal! It opens browser, sign in once, then it remembers
+
+ISSUE: Auto-startup doesn't work
+FIX:  Restart PC completely (logout isn't enough)
+      Or check: Win+R → type "shell:startup"
+
+
+═══════════════════════════════════════════════════════════════════════
+ ✅ VERIFICATION CHECKLIST
+═══════════════════════════════════════════════════════════════════════
+
+After installation, verify:
+  □ Tailscale tray icon shows green (connected)
+  □ GitHub Desktop opens and works
+  □ Git works: Open PowerShell, type: git --version
+  □ After restart, programs auto-launch
+
+
+═══════════════════════════════════════════════════════════════════════
+ 📦 WHAT'S INSTALLED (Technical Details)
+═══════════════════════════════════════════════════════════════════════
+
+Software Locations:
+  • Tailscale:       C:\Program Files\Tailscale\
+  • GitHub Desktop:  %LOCALAPPDATA%\GitHubDesktop\
+  • GitHub CLI:      %LOCALAPPDATA%\GitHub CLI\
+  • Startup files:   %APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\
+
+Git Configuration:
+  • user.name = mda756
+  • user.email = matt@Yokehealth.com
+  • credential.helper = manager
+  • Credentials stored in Windows Credential Manager
+
+
+═══════════════════════════════════════════════════════════════════════
+
+Ready to deploy?
+1. Open GET-AUTH-KEY.txt first
+2. Then use INSTALL-ON-NEW-PC.bat on each laptop
+
+Good luck! 🚀
+

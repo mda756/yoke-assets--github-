@@ -1,0 +1,92 @@
+
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║        ★★ HOW TO USE ON A NEW LAPTOP ★★                  ║
+║                                                           ║
+║              SUPER SIMPLE - 3 STEPS                       ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+
+┌───────────────────────────────────────────────────────────┐
+│  STEP 1: Copy the folder to new laptop                   │
+└───────────────────────────────────────────────────────────┘
+
+Copy this entire folder to the new laptop:
+   "startup-deployment  on other laptops"
+
+Put it anywhere easy to find (Desktop is fine!)
+
+
+┌───────────────────────────────────────────────────────────┐
+│  STEP 2: Run the installer                                │
+└───────────────────────────────────────────────────────────┘
+
+Double-click this file:
+   ► SIMPLE-ONE-CLICK-INSTALL.bat
+
+That's it! Just double-click it.
+
+When Windows asks "Do you want to allow this app to make changes?"
+   → Click YES
+
+
+┌───────────────────────────────────────────────────────────┐
+│  STEP 3: Watch it work!                                   │
+└───────────────────────────────────────────────────────────┘
+
+A window will open showing progress:
+   [1/6] Checking administrator privileges
+   [2/6] Checking Windows Package Manager
+   [3/6] Checking Tailscale VPN
+   [4/6] Checking GitHub Desktop (this takes 2-3 mins)
+   [5/6] Configuring Git
+   [6/6] Setting up auto-startup apps
+
+The window stays open so you can see what's happening!
+
+When done, restart the laptop.
+
+
+╔═══════════════════════════════════════════════════════════╗
+║                    THAT'S IT!                             ║
+╚═══════════════════════════════════════════════════════════╝
+
+After restart:
+  ✓ GitHub Desktop opens automatically
+  ✓ Tailscale connects automatically
+  ✓ Everything is configured
+
+
+┌───────────────────────────────────────────────────────────┐
+│  WHAT IF IT DOESN'T WORK?                                 │
+└───────────────────────────────────────────────────────────┘
+
+If the window closes immediately:
+  1. Right-click on SIMPLE-ONE-CLICK-INSTALL.bat
+  2. Select "Run as administrator"
+  3. Click YES when prompted
+
+If installations fail:
+  → The script will tell you which ones failed
+  → You can install them manually:
+     • Tailscale: https://tailscale.com/download
+     • GitHub Desktop: https://desktop.github.com
+
+
+┌───────────────────────────────────────────────────────────┐
+│  SMART FEATURES                                           │
+└───────────────────────────────────────────────────────────┘
+
+The script is smart:
+  ✓ Checks if software is already installed
+  ✓ Skips what's already there
+  ✓ Only installs what's missing
+  ✓ Shows clear progress messages
+  ✓ Keeps window open so you can see what happened
+
+
+═══════════════════════════════════════════════════════════
+
+Questions? The script tells you exactly what it's doing!
+

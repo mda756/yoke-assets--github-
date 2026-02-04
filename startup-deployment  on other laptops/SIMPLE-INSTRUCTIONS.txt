@@ -1,0 +1,138 @@
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║   COMPLETE PC SETUP - DEPLOYMENT INSTRUCTIONS                         ║
+║                                                                        ║
+║   This will install and configure:                                    ║
+║   • Tailscale (with auto-connect)                                     ║
+║   • GitHub Desktop                                                    ║
+║   • Git configuration                                                 ║
+║   • Auto-startup launcher (runs on login)                             ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════════════════
+ ONE-TIME SETUP (Do this ONCE on your main PC - ALREADY DONE!)
+═══════════════════════════════════════════════════════════════════════
+
+✓ Main PC is already configured
+✓ Startup launcher is active
+✓ Now you need to prepare for other PCs...
+
+
+═══════════════════════════════════════════════════════════════════════
+ STEP 1: Generate Tailscale Auth Key (REQUIRED FOR OTHER PCs)
+═══════════════════════════════════════════════════════════════════════
+
+ON YOUR MAIN PC (the one you're on now):
+
+1. Right-click: "1-GENERATE-TAILSCALE-KEY.ps1"
+2. Select: "Run with PowerShell"
+3. Follow the prompts (it will open Tailscale admin panel)
+4. The auth key will be saved to "auth-key.txt"
+
+
+═══════════════════════════════════════════════════════════════════════
+ STEP 2: Copy Deployment Folder to Other PCs
+═══════════════════════════════════════════════════════════════════════
+
+Copy this entire "startup-deployment" folder to each new PC using:
+• USB drive
+• Network share
+• OneDrive/Dropbox
+• Email attachment
+• Tailscale file sharing (once connected)
+
+
+═══════════════════════════════════════════════════════════════════════
+ STEP 3: Deploy on New PC (DO THIS ON EACH NEW PC)
+═══════════════════════════════════════════════════════════════════════
+
+ON THE NEW PC:
+
+1. Open the copied "startup-deployment" folder
+
+2. Right-click: "DEPLOY-COMPLETE-SETUP.ps1"
+
+3. Select: "Run as Administrator" (IMPORTANT!)
+
+4. Wait for installation to complete (3-5 minutes)
+
+5. Done! Everything is installed and configured!
+
+
+═══════════════════════════════════════════════════════════════════════
+ WHAT HAPPENS AFTER DEPLOYMENT
+═══════════════════════════════════════════════════════════════════════
+
+✓ Tailscale: Connected to your network automatically
+✓ GitHub Desktop: Installed (you'll sign in once on first launch)
+✓ Git: Configured with your name and email
+✓ Auto-startup: GitHub Desktop, Tailscale, and PowerShell will launch on login
+
+
+═══════════════════════════════════════════════════════════════════════
+ FIRST-TIME AUTHENTICATION (One-time per PC)
+═══════════════════════════════════════════════════════════════════════
+
+GitHub Desktop:
+• Will open automatically on first login
+• Click "Sign in to GitHub.com"
+• Authorize in browser
+• Done! It will remember your login
+
+Tailscale:
+• Should auto-connect using the auth key
+• If not, click the tray icon and sign in once
+
+
+═══════════════════════════════════════════════════════════════════════
+ QUICK START FOR NEW PC (TL;DR)
+═══════════════════════════════════════════════════════════════════════
+
+1. Copy "startup-deployment" folder to new PC
+2. Right-click "DEPLOY-COMPLETE-SETUP.ps1" → Run as Administrator
+3. Wait for completion
+4. Restart PC (or logout/login)
+5. Sign into GitHub Desktop when it opens
+6. Done!
+
+
+═══════════════════════════════════════════════════════════════════════
+ TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════
+
+❌ "Script won't run"
+   → Make sure you right-clicked and selected "Run as Administrator"
+
+❌ "Tailscale won't connect"
+   → Make sure you ran "1-GENERATE-TAILSCALE-KEY.ps1" first
+   → Check that the auth key is in "auth-key.txt"
+   → Or manually connect: Click Tailscale tray icon → Sign in
+
+❌ "Nothing auto-starts on login"
+   → Restart the PC completely (logout/login might not be enough)
+   → Check: Win+R → type "shell:startup" → should see startup files
+
+❌ "GitHub Desktop won't sign in"
+   → This is normal - sign in manually the first time
+   → It will remember your credentials afterward
+
+
+═══════════════════════════════════════════════════════════════════════
+ FILES IN THIS PACKAGE
+═══════════════════════════════════════════════════════════════════════
+
+1-GENERATE-TAILSCALE-KEY.ps1  → Run ONCE to get Tailscale auth key
+DEPLOY-COMPLETE-SETUP.ps1     → Main installer (run on each new PC)
+startup-apps.ps1              → Auto-startup script
+startup-apps.vbs              → Silent launcher (no console window)
+auth-key.txt                  → Tailscale auth key (created by step 1)
+SIMPLE-INSTRUCTIONS.txt       → This file
+README.txt                    → Additional info
+
+
+═══════════════════════════════════════════════════════════════════════
+
+Need help? The script shows progress and will tell you if anything fails.
+

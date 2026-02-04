@@ -1,0 +1,75 @@
+
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║   HOW TO GET YOUR TAILSCALE AUTH KEY                      ║
+║   (Do this once - takes 30 seconds)                       ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+
+The browser should have opened to:
+https://login.tailscale.com/admin/settings/keys
+
+If not, copy that URL and open it manually.
+
+
+┌────────────────────────────────────────────────────────────┐
+│  STEP-BY-STEP:                                             │
+└────────────────────────────────────────────────────────────┘
+
+1. Click the "Generate auth key..." button
+
+2. Fill in the form:
+
+   Description: Laptop Deployment Key
+
+   Expiration: 90 days (or longer)
+
+   ☑ Reusable           ← IMPORTANT! Check this box!
+   ☐ Ephemeral          ← Leave unchecked
+   ☐ Preauthorized      ← Check this (recommended)
+   ☐ Tags               ← Optional
+
+3. Click "Generate key"
+
+4. COPY the key (it starts with "tskey-auth-...")
+
+5. Save it in this folder as "auth-key.txt"
+   OR paste it when running AUTO-SETUP-WITH-PROMPTS.ps1
+
+
+┌────────────────────────────────────────────────────────────┐
+│  WHAT THIS KEY DOES:                                       │
+└────────────────────────────────────────────────────────────┘
+
+This key allows new PCs to join your Tailscale network
+automatically without manual login.
+
+Since it's REUSABLE, you can use the same key for all your
+laptops. No need to generate a new one each time!
+
+
+┌────────────────────────────────────────────────────────────┐
+│  SAVE THE KEY:                                             │
+└────────────────────────────────────────────────────────────┘
+
+Create a file called "auth-key.txt" in this folder and paste
+the key (just the key, nothing else).
+
+The key looks like: tskey-auth-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+┌────────────────────────────────────────────────────────────┐
+│  NEXT STEPS:                                               │
+└────────────────────────────────────────────────────────────┘
+
+Once you have the key saved:
+
+• Copy this entire "startup-deployment" folder to your
+  other laptops
+
+• On each laptop, right-click AUTO-SETUP-WITH-PROMPTS.ps1
+  and select "Run as Administrator"
+
+• Everything installs automatically!
+
