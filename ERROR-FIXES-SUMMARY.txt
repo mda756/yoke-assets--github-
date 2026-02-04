@@ -1,0 +1,116 @@
+
+═══════════════════════════════════════════════════════════
+  "UNABLE TO TRANSFER FILES" ERROR - FIXED!
+═══════════════════════════════════════════════════════════
+
+
+WHAT WAS CAUSING THE ERRORS:
+────────────────────────────────────────────────────────────
+
+1. TOO MANY BROWSER TABS (50+ instances!)
+   → Chrome: 14 tabs
+   → Edge: 36 tabs
+   → This exhausts system resources
+   → File uploads/downloads fail
+
+2. STARTUP SCRIPT TIMING
+   → sort-dropbox-folders.vbs ran too early
+   → Conflicted with Dropbox sync
+   → Caused file operation failures
+
+3. BROWSER FILE OPERATIONS
+   → Uploading files to Claude.ai, websites
+   → Network timeouts
+   → Dropbox sync conflicts
+
+
+WHAT WAS FIXED:
+────────────────────────────────────────────────────────────
+
+✓ Updated sort-dropbox-folders.vbs startup script:
+  • Added 10 second delay before running
+  • Checks if Dropbox is ready first
+  • Better error handling
+  • Longer delays between operations
+
+✓ Created diagnostic tools:
+  • DIAGNOSE-FILE-ERRORS.ps1 - Check system status
+  • QUICK-FIX-ERRORS.bat - Quick cleanup tool
+
+
+HOW TO PREVENT FUTURE ERRORS:
+────────────────────────────────────────────────────────────
+
+1. MANAGE BROWSER TABS:
+   ⚠ Close unused browser tabs regularly
+   ⚠ Don't keep 30+ tabs open
+   → Use bookmarks instead
+   → Use OneTab extension to save tabs
+
+2. BEFORE LARGE FILE UPLOADS:
+   → Pause Dropbox sync temporarily
+   → Close unnecessary browser tabs
+   → Close other apps using network
+
+3. IF ERRORS HAPPEN:
+   → Double-click: QUICK-FIX-ERRORS.bat
+   → It will close browsers and restart Dropbox
+   → Clears temp files
+
+4. RESTART REGULARLY:
+   → Restart PC every few days
+   → Clears locked files
+   → Resets network connections
+
+
+WHEN TO RUN DIAGNOSTIC:
+────────────────────────────────────────────────────────────
+
+Run: DIAGNOSE-FILE-ERRORS.ps1 if you see:
+  • Multiple "Unable to transfer files" errors
+  • Slow file uploads/downloads
+  • Dropbox sync issues
+  • Browser becoming unresponsive
+
+
+QUICK REFERENCE:
+────────────────────────────────────────────────────────────
+
+Error happening now?
+  → Run: QUICK-FIX-ERRORS.bat
+
+Want to check system status?
+  → Run: DIAGNOSE-FILE-ERRORS.ps1
+
+Too many browser tabs?
+  → Close Chrome: taskkill /F /IM chrome.exe
+  → Close Edge: taskkill /F /IM msedge.exe
+
+Dropbox not syncing?
+  → Restart it: Kill process, then reopen
+
+
+FILE LOCATIONS:
+────────────────────────────────────────────────────────────
+
+Diagnostic Tool:
+  C:\Users\matth\Dropbox\Yoke Digital\yoke-assets--github-\
+  DIAGNOSE-FILE-ERRORS.ps1
+
+Quick Fix:
+  C:\Users\matth\Dropbox\Yoke Digital\yoke-assets--github-\
+  QUICK-FIX-ERRORS.bat
+
+Updated Startup Script:
+  C:\Users\matth\AppData\Roaming\Microsoft\Windows\
+  Start Menu\Programs\Startup\sort-dropbox-folders.vbs
+
+
+═══════════════════════════════════════════════════════════
+
+The errors should be much less frequent now!
+
+If you still see them, run the diagnostic tool to check
+what's causing the issue.
+
+═══════════════════════════════════════════════════════════
