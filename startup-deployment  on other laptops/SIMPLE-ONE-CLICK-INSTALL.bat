@@ -9,6 +9,9 @@ mode con: cols=80 lines=30
 color 0A
 title PC Setup - One Click Installer
 
+REM Store the script directory (with trailing backslash)
+set "SCRIPT_DIR=%~dp0"
+
 echo.
 echo ========================================================================
 echo                    SIMPLE ONE-CLICK PC SETUP
@@ -16,7 +19,7 @@ echo ========================================================================
 echo.
 echo  This will:
 echo    - Check what's already installed
-echo    - Install missing software (Tailscale, GitHub Desktop)
+echo    - Install missing software (Tailscale, GitHub Desktop, Node.js, Claude)
 echo    - Configure Git
 echo    - Setup auto-startup
 echo.
@@ -24,7 +27,7 @@ echo  Window will stay open so you can see progress!
 echo.
 echo ========================================================================
 echo.
-timeout /t 3 /nobreak
+timeout /t 3 /nobreak >nul
 
 echo Checking for administrator rights...
 echo.
@@ -35,21 +38,21 @@ if %errorLevel% == 0 (
     echo.
     echo Starting installation...
     echo.
-    timeout /t 2 /nobreak
-    powershell.exe -ExecutionPolicy Bypass -NoExit -File "%~dp0ONE-CLICK-SETUP.ps1"
+    timeout /t 2 /nobreak >nul
+    powershell.exe -ExecutionPolicy Bypass -NoExit -File "%SCRIPT_DIR%ONE-CLICK-SETUP.ps1"
 ) else (
     echo [NOTICE] Need administrator rights to install software
     echo.
     echo Requesting admin access... ^(click YES when Windows asks^)
     echo.
-    timeout /t 3 /nobreak
+    timeout /t 3 /nobreak >nul
 
-    REM Launch with admin and keep window open
-    powershell.exe -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d ""%~dp0"" && powershell.exe -ExecutionPolicy Bypass -NoExit -File ""%~dp0ONE-CLICK-SETUP.ps1""'"
+    REM Launch PowerShell script directly with admin - simpler approach
+    powershell.exe -Command "Start-Process powershell.exe -Verb RunAs -ArgumentList '-ExecutionPolicy Bypass -NoExit -File \"%SCRIPT_DIR%ONE-CLICK-SETUP.ps1\"'"
 
     echo.
-    echo If nothing happened, the request was cancelled.
-    echo Try running this file again and click YES when prompted.
+    echo A new admin window should have opened.
+    echo If nothing happened, right-click this file and select "Run as administrator"
     echo.
     pause
 )
