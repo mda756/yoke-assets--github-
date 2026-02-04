@@ -29,28 +29,20 @@ foreach ($path in $tailscalePaths) {
 }
 
 # Launch PowerShell with Claude Code
-# First check if claude is installed
-$claudeInstalled = $false
-try {
-    $null = Get-Command claude -ErrorAction Stop
-    $claudeInstalled = $true
-} catch {
-    $claudeInstalled = $false
-}
+# Use batch file for more reliable launching
+$batchPath = Join-Path $PSScriptRoot "launch-claude.bat"
 
-if ($claudeInstalled) {
-    # Launch Windows Terminal (or PowerShell) with Claude Code
-    # Check if Windows Terminal is available
-    $wtInstalled = Get-Command wt -ErrorAction SilentlyContinue
-
-    if ($wtInstalled) {
-        # Use Windows Terminal with Claude Code
-        Start-Process wt -ArgumentList "powershell.exe -NoExit -Command `"cd '$HOME'; claude`""
-    } else {
-        # Use regular PowerShell with Claude Code
-        Start-Process powershell.exe -ArgumentList "-NoExit -Command `"cd '$HOME'; claude`""
-    }
+if (Test-Path $batchPath) {
+    # Launch using the batch file (more reliable)
+    Start-Process $batchPath
 } else {
-    # Claude not installed, just open PowerShell
-    Start-Process powershell.exe
+    # Fallback: Try direct PowerShell launch
+    try {
+        $null = Get-Command claude -ErrorAction Stop
+        # Claude is installed, launch it
+        Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "cd ~; claude"
+    } catch {
+        # Claude not installed, just open PowerShell
+        Start-Process powershell.exe
+    }
 }
