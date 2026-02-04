@@ -55,7 +55,7 @@ Start-Sleep -Seconds 2
 # Configuration
 $GIT_USERNAME = "mda756"
 $GIT_EMAIL = "matt@Yokehealth.com"
-$TOTAL_STEPS = 6
+$TOTAL_STEPS = 8
 
 # ============================================================================
 # STEP 1: Check Administrator
@@ -150,9 +150,109 @@ if (Test-Path $githubPath) {
 }
 
 # ============================================================================
-# STEP 5: Configure Git
+# STEP 5: Check/Install Node.js (required for Claude Code)
 # ============================================================================
-Write-Step 5 $TOTAL_STEPS "Configuring Git"
+Write-Step 5 $TOTAL_STEPS "Checking Node.js (required for Claude Code)"
+
+$nodeInstalled = $false
+try {
+    $nodeVersion = node --version 2>&1
+    if ($nodeVersion -match "^v\d+") {
+        Write-Success "Node.js is already installed (version: $nodeVersion)"
+        $nodeInstalled = $true
+    }
+} catch {
+    $nodeInstalled = $false
+}
+
+if (-not $nodeInstalled) {
+    Write-Info "Node.js not found - installing now..."
+    Write-Info "This may take 2-3 minutes, please wait..."
+
+    try {
+        $installOutput = winget install --id OpenJS.NodeJS.LTS --silent --accept-package-agreements --accept-source-agreements 2>&1
+        Start-Sleep -Seconds 5
+
+        # Refresh PATH to include newly installed Node
+        $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH", "User")
+
+        # Test if node is now available
+        try {
+            $nodeVersion = node --version 2>&1
+            if ($nodeVersion -match "^v\d+") {
+                Write-Success "Node.js installed successfully! (version: $nodeVersion)"
+                $nodeInstalled = $true
+            } else {
+                Write-Error-Safe "Node.js installed but may need a restart to work"
+                Write-Info "Claude Code installation will be attempted anyway"
+                $nodeInstalled = $true
+            }
+        } catch {
+            Write-Error-Safe "Node.js installed but not in PATH yet"
+            Write-Info "You may need to restart your PC, then run: npm install -g @anthropic-ai/claude-code"
+        }
+    } catch {
+        Write-Error-Safe "Could not install Node.js: $_"
+        Write-Info "You can install it manually from: https://nodejs.org"
+    }
+}
+
+# ============================================================================
+# STEP 6: Check/Install Claude Code
+# ============================================================================
+Write-Step 6 $TOTAL_STEPS "Checking Claude Code"
+
+# Add npm global path to current session
+$npmPath = "$env:APPDATA\npm"
+if ($env:PATH -notlike "*$npmPath*") {
+    $env:PATH = "$npmPath;$env:PATH"
+}
+
+$claudeInstalled = $false
+try {
+    $claudeVersion = claude --version 2>&1
+    if ($claudeVersion) {
+        Write-Success "Claude Code is already installed"
+        $claudeInstalled = $true
+    }
+} catch {
+    $claudeInstalled = $false
+}
+
+if (-not $claudeInstalled -and $nodeInstalled) {
+    Write-Info "Claude Code not found - installing now..."
+    Write-Info "This may take 1-2 minutes, please wait..."
+
+    try {
+        # Run npm install as the current user (not admin) for proper permissions
+        $installResult = npm install -g @anthropic-ai/claude-code 2>&1
+        Start-Sleep -Seconds 3
+
+        # Test if claude is now available
+        try {
+            $claudeVersion = & "$npmPath\claude.cmd" --version 2>&1
+            if ($claudeVersion) {
+                Write-Success "Claude Code installed successfully!"
+                $claudeInstalled = $true
+            } else {
+                Write-Info "Claude Code installed - may need terminal restart to use"
+            }
+        } catch {
+            Write-Info "Claude Code installed - restart terminal to use 'claude' command"
+        }
+    } catch {
+        Write-Error-Safe "Could not install Claude Code: $_"
+        Write-Info "You can install it manually: npm install -g @anthropic-ai/claude-code"
+    }
+} elseif (-not $nodeInstalled) {
+    Write-Skip "Skipping Claude Code (Node.js required)"
+    Write-Info "After installing Node.js, run: npm install -g @anthropic-ai/claude-code"
+}
+
+# ============================================================================
+# STEP 7: Configure Git
+# ============================================================================
+Write-Step 7 $TOTAL_STEPS "Configuring Git"
 
 try {
     git config --global user.name "$GIT_USERNAME" 2>&1 | Out-Null
@@ -169,9 +269,9 @@ try {
 }
 
 # ============================================================================
-# STEP 6: Setup Auto-Startup
+# STEP 8: Setup Auto-Startup
 # ============================================================================
-Write-Step 6 $TOTAL_STEPS "Setting up auto-startup apps"
+Write-Step 8 $TOTAL_STEPS "Setting up auto-startup apps"
 
 $startupFolder = [Environment]::GetFolderPath('Startup')
 $scriptPath = Join-Path $PSScriptRoot "startup-apps.ps1"
@@ -214,6 +314,18 @@ if (Test-Path $githubPath) {
     Write-Host "  [--] GitHub Desktop (not installed)" -ForegroundColor Yellow
 }
 
+if ($nodeInstalled) {
+    Write-Host "  [OK] Node.js" -ForegroundColor Green
+} else {
+    Write-Host "  [--] Node.js (not installed)" -ForegroundColor Yellow
+}
+
+if ($claudeInstalled) {
+    Write-Host "  [OK] Claude Code" -ForegroundColor Green
+} else {
+    Write-Host "  [--] Claude Code (not installed)" -ForegroundColor Yellow
+}
+
 Write-Host "  [OK] Git Configuration" -ForegroundColor Green
 Write-Host "  [OK] Auto-startup Setup" -ForegroundColor Green
 Write-Host ""
@@ -227,11 +339,12 @@ Write-Host ""
 Write-Host "2. After restart, these will open automatically:" -ForegroundColor White
 Write-Host "   - GitHub Desktop (sign in on first launch)" -ForegroundColor Gray
 Write-Host "   - Tailscale (should already be connected)" -ForegroundColor Gray
-Write-Host "   - PowerShell window" -ForegroundColor Gray
+Write-Host "   - Terminal with Claude Code" -ForegroundColor Gray
 Write-Host ""
 Write-Host "3. First-time setup:" -ForegroundColor White
 Write-Host "   - GitHub Desktop: Sign in with your GitHub account" -ForegroundColor Gray
 Write-Host "   - Tailscale: Should auto-connect (or sign in via tray icon)" -ForegroundColor Gray
+Write-Host "   - Claude Code: Will prompt for Anthropic API key on first run" -ForegroundColor Gray
 Write-Host ""
 Write-Host "========================================================================" -ForegroundColor Cyan
 Write-Host ""
