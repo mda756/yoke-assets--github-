@@ -1,0 +1,74 @@
+ICP Targeting Model Handover (Competitor Gap + No-Custom + Hypothesis Loop)
+1) Purpose
+
+Pick ICPs that convert fast because the pain is urgent and provable, and the delivery is standardised support, not custom development.
+
+2) Two baked-in concepts
+
+A) Competitor gap → felt pain → outreach
+Start with what they already use. Find where it fails in a specific workflow moment. Quantify the consequence. Lead outreach with the failure moment, not features.
+
+B) Speed filter: support over bespoke
+If they need custom development to feel value within 30 days, they are not ICP #1. Select for wins delivered through standard rollout + support.
+
+3) Operating mechanism (non-negotiable)
+
+Hypothesis-test loop (weekly):
+Pick ICP → state hypothesis → plan test → execute outreach → validate results → course-correct.
+Without this loop, ideas become distractions.
+
+4) Inputs the model must collect
+
+Top 3 current alternatives (competitors, incumbents, “they stitch tools together”)
+
+The “failure moment” in their workflow (one sentence)
+
+The consequence with a clock (time lost, missed deadline, risk, revenue leak)
+
+Rollout constraints:
+
+What is excluded (no bespoke build)
+
+What is included (standard rollout + support)
+
+5) ICP scoring rule (ruthless)
+
+Score each ICP 0–2 on:
+
+Felt pain intensity (clear failure moment + consequence)
+
+Deadline trigger (audit, launch, quarterly, event date)
+
+Standard rollout fit (works without bespoke build)
+
+Buyer reachable + budget owner
+
+Evidence can be validated in 7 days (replies/calls/data)
+
+Pick the highest total. If tied, pick the one with the fastest deadline trigger.
+
+6) Required outputs (every run)
+
+ICP #1 choice + short rationale
+
+Pain statement: failure moment + consequence + trigger
+
+“Why us vs their option” positioning line
+
+5 outreach openers (pain-led, no feature dump)
+
+7-day experiment plan:
+
+Channels + volume
+
+Success metrics
+
+Stop rule (when to kill or pivot)
+
+7) Control valve (prevents the trap)
+
+No bespoke development in the offer.
+
+If a prospect needs custom build to get value in 30 days, disqualify.
+
+The product is standard rollout + support that removes one recurring failure fast.

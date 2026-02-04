@@ -1,0 +1,67 @@
+{
+  "id": "icp_011_single_product_wedge",
+  "name": "Single-Product Wedge Buyers (e.g., iCases In-Room)",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "low",
+  "criteria": {
+    "job_titles": [
+      "Event Director",
+      "Education Director",
+      "Programme Manager",
+      "Medical Director"
+    ],
+    "industries": [
+      "Medical Communications",
+      "Medical Education",
+      "Pharma",
+      "IME"
+    ],
+    "company_size": "10-500 employees",
+    "location": ["UK", "EU", "US"],
+    "pain_points": [
+      "One-off event thinking",
+      "Data resets every time unless a series exists",
+      "Need in-room engagement proof"
+    ],
+    "buying_signals": [
+      "Running in-room learning formats",
+      "Workshops, symposia, case sessions",
+      "Sponsor proof requirements"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "When it is part of a repeatable programme or you can convert it into one",
+    "park": "One-off with no intent to reuse or learn",
+    "stop": "Refuse any follow-up cadence and only want 'a tool for the day'"
+  },
+  "what_they_sell": "Event formats and outcomes",
+  "what_proof_means": "In-room decisions, confidence shift, benchmarking, and post-session insight pack.",
+  "yoke_strengths": [
+    "Immediate engagement depth in-room plus measurable outputs",
+    "Can upsell into series/trendlines and always-on follow-up"
+  ],
+  "yoke_weaknesses": [
+    "If they refuse any follow-up cadence and only want 'a tool for the day'"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke provides in-room engagement tools that deliver immediate proof—with potential to expand into series and follow-up.",
+    "key_benefits": [
+      "Immediate in-room engagement measurement",
+      "Confidence shifts and decision tracking",
+      "Benchmarking across sessions",
+      "Upsell into series with trendlines"
+    ],
+    "elevator_pitch": "In-room events need immediate engagement proof. Yoke measures decisions and confidence in real-time—and can expand into series for longitudinal insight."
+  },
+  "apollo_filters": {
+    "departments": ["Events", "Education", "Medical"],
+    "keywords_include": ["events", "symposia", "workshops", "in-room learning"],
+    "keywords_exclude": ["virtual only"],
+    "disqualify_filters": ["One-off only with no repeat intent"]
+  },
+  "two_lever_framing": {
+    "lever_a": "Increase sponsor value with in-room proof",
+    "lever_b": "Reduce post-event reporting burden"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "icp_id": "icp_003_biotech_prelaunch",
+  "icp_name": "Biotech Pre-Launch",
+  "priority_signals": [
+    {
+      "type": "pain_discussions",
+      "priority": 1,
+      "weight": 0.35,
+      "pain_keywords": [
+        "HCP readiness",
+        "launch preparation",
+        "medical education",
+        "evidence gaps",
+        "static content",
+        "engagement data",
+        "field team training",
+        "KOL engagement"
+      ],
+      "intent_phrases": [
+        "preparing for launch",
+        "need platform for",
+        "looking for solution",
+        "how to measure",
+        "recommendations for readiness"
+      ]
+    },
+    {
+      "type": "funding_rounds",
+      "priority": 2,
+      "weight": 0.25,
+      "funding_stages": [
+        "Series B",
+        "Series C",
+        "IPO",
+        "Partnership"
+      ],
+      "min_amount_usd": 20000000
+    },
+    {
+      "type": "product_launches",
+      "priority": 3,
+      "weight": 0.20,
+      "launch_keywords": [
+        "Phase III",
+        "Phase II",
+        "regulatory submission",
+        "FDA approval",
+        "EMA approval",
+        "pre-launch",
+        "commercial readiness"
+      ]
+    },
+    {
+      "type": "hiring_signals",
+      "priority": 4,
+      "weight": 0.10,
+      "hiring_keywords": [
+        "Head of Medical Affairs",
+        "Medical Affairs Director",
+        "Launch Excellence",
+        "Medical Education",
+        "Field Medical"
+      ]
+    },
+    {
+      "type": "conference_activity",
+      "priority": 5,
+      "weight": 0.10,
+      "conference_keywords": [
+        "abstract accepted",
+        "presenting at",
+        "congress",
+        "symposium",
+        "clinical data"
+      ]
+    }
+  ],
+  "sources": {
+    "pain_discussions": [
+      "reddit:r/biotech",
+      "reddit:r/clinicalresearch",
+      "twitter:#biotech",
+      "twitter:#clinicaltrials"
+    ],
+    "funding_rounds": [
+      "crunchbase_api"
+    ],
+    "product_launches": [
+      "press_releases",
+      "fda_calendar",
+      "ema_calendar",
+      "clinicaltrials_gov"
+    ],
+    "hiring_signals": [
+      "company_careers"
+    ],
+    "conference_activity": [
+      "conference_listings:biotech",
+      "abstract_databases"
+    ]
+  },
+  "signal_threshold": 2,
+  "alert_on": "funding_rounds OR (product_launches + pain_discussions)"
+}

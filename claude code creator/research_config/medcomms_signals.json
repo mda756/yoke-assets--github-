@@ -1,0 +1,98 @@
+{
+  "icp_id": "icp_001_medcomms_agencies",
+  "icp_name": "Medcomms Agencies",
+  "priority_signals": [
+    {
+      "type": "pain_discussions",
+      "priority": 1,
+      "weight": 0.40,
+      "pain_keywords": [
+        "slow delivery",
+        "client proof",
+        "compliance burden",
+        "dev dependency",
+        "rework",
+        "speed pressure",
+        "sponsor reporting",
+        "outcomes evidence",
+        "multi-market delivery"
+      ],
+      "intent_phrases": [
+        "looking for platform",
+        "need better proof",
+        "struggling with",
+        "how do you handle",
+        "recommendations for"
+      ]
+    },
+    {
+      "type": "product_launches",
+      "priority": 2,
+      "weight": 0.25,
+      "launch_keywords": [
+        "new digital service",
+        "platform launch",
+        "interactive learning",
+        "medical education platform",
+        "CPD service"
+      ]
+    },
+    {
+      "type": "conference_activity",
+      "priority": 3,
+      "weight": 0.20,
+      "conference_keywords": [
+        "speaker",
+        "presenting on",
+        "digital innovation",
+        "measurement",
+        "outcomes"
+      ]
+    },
+    {
+      "type": "hiring_signals",
+      "priority": 4,
+      "weight": 0.10,
+      "hiring_keywords": [
+        "Head of Digital",
+        "Digital Director",
+        "Innovation",
+        "Platform",
+        "Technology"
+      ]
+    },
+    {
+      "type": "company_news",
+      "priority": 5,
+      "weight": 0.05,
+      "news_keywords": [
+        "new client win",
+        "expansion",
+        "growth",
+        "investment"
+      ]
+    }
+  ],
+  "sources": {
+    "pain_discussions": [
+      "reddit:r/medicalwriting",
+      "reddit:r/medcomms",
+      "twitter:#medcomms",
+      "twitter:#medicalcommunications",
+      "g2:medical-communications"
+    ],
+    "product_launches": [
+      "press_releases",
+      "company_blogs"
+    ],
+    "conference_activity": [
+      "conference_listings:healthcare_communications",
+      "event_speakers"
+    ],
+    "hiring_signals": [
+      "company_careers"
+    ]
+  },
+  "signal_threshold": 2,
+  "alert_on": "pain_discussions + (product_launches OR conference_activity)"
+}

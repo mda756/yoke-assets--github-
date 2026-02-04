@@ -1,0 +1,67 @@
+{
+  "id": "icp_009_nontech_startups",
+  "name": "Non-Tech Startups Needing Enablement Through Tech",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "low",
+  "criteria": {
+    "job_titles": [
+      "Founder",
+      "CEO",
+      "COO",
+      "Head of Operations"
+    ],
+    "industries": [
+      "Healthcare Services",
+      "Education Services",
+      "Professional Services"
+    ],
+    "company_size": "1-50 employees",
+    "location": ["UK", "EU", "US"],
+    "pain_points": [
+      "Low resources and speed pressure",
+      "Unclear product thinking",
+      "Risk of building the wrong thing",
+      "Need system to deliver and measure outcomes"
+    ],
+    "buying_signals": [
+      "Launching new service/business line",
+      "Need platform to run business model",
+      "Seeking retention mechanics"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "They have a clear delivery model and need enablement + proof",
+    "park": "Idea is vague, no owner, no cadence, no budget",
+    "stop": "Need deep bespoke product-market fit discovery before any platform makes sense"
+  },
+  "what_they_sell": "A service or subscription. They need proof to win trust and improve fast.",
+  "what_proof_means": "Evidence the service works, that users progress, that retention is improving.",
+  "yoke_strengths": [
+    "Fast-to-live foundation + dashboards/alerting + iteration loop",
+    "Progress mechanics (nudges, gamification, checkpoints) to drive retention"
+  ],
+  "yoke_weaknesses": [
+    "If they need deep bespoke product-market fit discovery before any platform makes sense"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke helps non-tech startups launch service delivery systems quickly—with built-in measurement and retention mechanics.",
+    "key_benefits": [
+      "Launch fast without building from scratch",
+      "Measure user progress and retention",
+      "Iterate based on real outcomes data",
+      "Drive retention with progress mechanics"
+    ],
+    "elevator_pitch": "Non-tech startups need delivery systems but lack tech capability. Yoke provides a fast-to-live foundation with measurement—so you can launch and iterate quickly."
+  },
+  "apollo_filters": {
+    "departments": ["Operations", "Founder"],
+    "keywords_include": ["startup", "new service", "education service", "healthcare service"],
+    "keywords_exclude": ["tech company", "software company"],
+    "disqualify_filters": ["No clear delivery model", "Pre-revenue with vague idea"]
+  },
+  "two_lever_framing": {
+    "lever_a": "Increase service retention and user progress",
+    "lever_b": "Reduce launch time and build costs"
+  }
+}

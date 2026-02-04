@@ -1,0 +1,247 @@
+{
+  "id": "icp_013_medical_societies_cpd",
+  "name": "Medical Societies - CPD/Outcomes Portals",
+  "created_date": "2026-02-04",
+  "status": "active",
+  "priority": "very_high",
+  "score": 10,
+  "model_type": "portal_saas",
+  "criteria": {
+    "job_titles": [
+      "CEO",
+      "Chief Executive",
+      "Education Director",
+      "Head of Education",
+      "CPD Manager",
+      "Professional Development Lead",
+      "Registrar",
+      "Secretary General"
+    ],
+    "organization_types": [
+      "Medical Royal Colleges",
+      "Medical Specialty Societies",
+      "Allied Health Professional Bodies",
+      "CPD Accreditation Bodies"
+    ],
+    "member_size": "100-5000 members",
+    "location": ["UK"],
+    "pain_points": [
+      "GMC revalidation requires outcomes evidence, not just attendance",
+      "Accreditation audits demand proof of behavior change and clinical impact",
+      "Current LMS platforms only track completions, not learning outcomes",
+      "Manual aggregation of member reflection notes for audit reports",
+      "Difficult to demonstrate CPD value to members at AGM/renewal time",
+      "Regulators want evidence of 'learning gained and effect on practice'"
+    ],
+    "buying_signals": [
+      "Upcoming GMC revalidation cycle (5-year)",
+      "Annual accreditation audit approaching",
+      "AGM reporting season (need to show member value)",
+      "Membership renewal period (justify fees with outcomes)",
+      "New CPD platform procurement",
+      "Complaints about existing LMS lacking outcomes"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "They have members requiring CPD for professional registration (GMC, Royal College, etc.), conduct accreditation audits, and need to demonstrate outcomes beyond completion certificates.",
+    "park": "Organization doesn't have regulatory CPD requirements or is satisfied with completion-only tracking",
+    "stop": "Expect Yoke to create CPD content or deliver courses (we provide measurement layer only)"
+  },
+  "what_they_sell": "Professional membership with CPD/CME programs for regulatory compliance (GMC revalidation, Royal College standards)",
+  "what_proof_means": "Outcomes evidence for accreditation audits: confidence shifts, clinical decision impact, behavior change over time, reflection analytics - all required for GMC revalidation and Royal College standards.",
+  "yoke_strengths": [
+    "Measures outcomes, not just completions (exactly what GMC/Royal Colleges require)",
+    "Automated reflection and learning impact tracking (vs manual notes)",
+    "Accreditation-ready reports (behavior change, confidence, decision impact)",
+    "Always-on portal (members self-serve, no society admin overhead)",
+    "Proven enterprise credibility (Medscape partnership, awards)",
+    "Standard CPD templates (no custom content creation per society)"
+  ],
+  "yoke_weaknesses": [
+    "If they expect us to create CPD content (we're measurement layer, not content provider)",
+    "If society has no regulatory pressure (optional CPD only)",
+    "Very small societies (<50 members) may not have budget"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke helps medical societies meet GMC revalidation and accreditation requirements with automated outcomes measurement - proving behavior change and clinical impact, not just course completions.",
+    "key_benefits": [
+      "Satisfy GMC revalidation requirements with outcomes evidence (not just attendance)",
+      "Pass accreditation audits with automated behavior change reporting",
+      "Demonstrate member value at AGM with confidence shifts and decision impact data",
+      "Reduce admin burden - members self-serve, automated reflection aggregation",
+      "Justify membership fees by showing real learning outcomes"
+    ],
+    "elevator_pitch": "GMC revalidation requires outcomes evidence, but most LMS platforms only track completions. Yoke provides the outcomes layer - measuring confidence shifts, clinical decisions, and behavior change - so your CPD programs satisfy accreditation audits and demonstrate real member value."
+  },
+  "apollo_filters": {
+    "organization_types": ["Medical Society", "Professional Body", "Royal College", "Healthcare Association"],
+    "locations": ["United Kingdom"],
+    "keywords_include": ["CPD", "CME", "continuing professional development", "medical education", "member services", "accreditation"],
+    "keywords_exclude": ["conference organizer only", "publishing only", "pharmaceutical"],
+    "disqualify_filters": ["No CPD program", "Under 50 members", "No regulatory requirements"]
+  },
+  "two_lever_framing": {
+    "lever_a": "Increase member value and retention with outcomes-based CPD that satisfies revalidation requirements",
+    "lever_b": "Reduce admin burden and accreditation risk by automating outcomes measurement and reflection aggregation"
+  },
+  "competitor_gap": {
+    "current_tools": [
+      "BMJ Learning (courses + completion tracking)",
+      "Lumis LMS (150+ CPD courses, certificates)",
+      "LearnPro (NHS mandatory learning, compliance tracking)",
+      "MIMS Learning (quizzes, webinars, certificates)",
+      "Royal College CPD Diaries (self-recording)",
+      "Generic LMS (Moodle, TalentLMS) + manual reflection notes"
+    ],
+    "what_they_do": "Track course completions, issue certificates of attendance, store manual reflection notes, monitor credit accumulation",
+    "what_they_dont_do": "Measure behavior change, track clinical decision impact, show confidence shifts over time, demonstrate patient outcomes, provide automated outcomes evidence for accreditation audits",
+    "failure_moment": "Annual accreditation audit: Regulator asks for evidence that CPD activities led to behavior change and improved clinical practice. Society can only show attendance certificates and disconnected reflection notes. Auditor flags gaps in outcomes evidence.",
+    "consequence": "Failed accreditation (lose ability to award CPD credits) or conditional pass requiring remediation plan. Loss of member trust and value proposition.",
+    "clock": "Annual accreditation audits (Q1-Q2), GMC revalidation cycles (5-year), AGM reporting (quarterly/annual)"
+  },
+  "deadline_triggers": [
+    {
+      "type": "gmc_revalidation_cycle",
+      "frequency": "5-year cycle, annual submissions",
+      "urgency": "very_high",
+      "signal": "Members approaching revalidation deadline, need outcomes evidence",
+      "source": "GMC requires 250 CPD credits per 5-year cycle with reflection on learning and impact"
+    },
+    {
+      "type": "accreditation_audit",
+      "frequency": "annual",
+      "urgency": "very_high",
+      "signal": "CPD Standards Office or Royal College accreditation review scheduled",
+      "source": "IACPDA/ACCME standards require outcome assessment of educational activities"
+    },
+    {
+      "type": "agm_reporting",
+      "frequency": "annual",
+      "urgency": "high",
+      "signal": "AGM approaching, need to demonstrate member value and CPD impact",
+      "source": "Membership renewal season, justify fees with outcomes"
+    },
+    {
+      "type": "membership_renewal",
+      "frequency": "annual",
+      "urgency": "medium",
+      "signal": "Renewal period, members questioning value of CPD programs",
+      "source": "Annual membership fees £115-£330, need to show ROI"
+    }
+  ],
+  "standard_rollout": {
+    "product": "CPD Outcomes Portal",
+    "components": [
+      "White-label portal for member access",
+      "Standard CPD module templates (upload existing content)",
+      "Automated outcomes measurement (confidence, decisions, behavior)",
+      "Reflection prompts and aggregation",
+      "Accreditation-ready reports dashboard",
+      "Member learning portfolios"
+    ],
+    "setup_time": "2-4 weeks",
+    "customization_needed": "minimal",
+    "proof_of_delivery": "Medscape outcomes measurement + Awards for enterprise credibility",
+    "no_custom_score": 2,
+    "description": "Society uploads existing CPD content to templates. Members access portal, complete modules with built-in outcomes measurement. Automated analytics generate accreditation reports. No content creation or custom builds required."
+  },
+  "icp_score": {
+    "total": 10,
+    "breakdown": {
+      "pain_intensity": 2,
+      "deadline_trigger": 2,
+      "standard_fit": 2,
+      "buyer_reachable": 2,
+      "evidence_speed": 2
+    },
+    "rationale": "PERFECT SCORE. Regulatory pain (GMC revalidation mandatory), hard deadlines (annual audits, 5-year cycles), standard product (CPD templates, no custom per society), buyers easily reachable (CEO/Education Director in small orgs), evidence fast to validate (public accreditation requirements, discovery calls).",
+    "validation_date": "2026-02-04",
+    "validation_source": "Web research: GMC guidance, Royal College standards, CPD accreditation requirements, LMS competitor analysis"
+  },
+  "target_segments": [
+    {
+      "segment": "Small specialty societies",
+      "size": "100-500 members",
+      "examples": ["British Society of [Specialty]", "Regional college chapters", "Allied health bodies"],
+      "deal_size_estimate": "£10-20k/year",
+      "buyer": "CEO or Education Director",
+      "sales_cycle_estimate": "4-8 weeks",
+      "priority": "high",
+      "rationale": "Direct buyer access, clear pain, fast decisions"
+    },
+    {
+      "segment": "Mid-size professional bodies",
+      "size": "500-2000 members",
+      "examples": ["Chartered Society of Physiotherapy", "Royal Society for Public Health"],
+      "deal_size_estimate": "£20-50k/year",
+      "buyer": "Education Director + committee approval",
+      "sales_cycle_estimate": "8-16 weeks",
+      "priority": "medium",
+      "rationale": "Larger revenue per deal, committee sales process"
+    },
+    {
+      "segment": "Royal Colleges",
+      "size": "2000-20000 members",
+      "examples": ["Royal College of Physicians", "Royal College of Surgeons"],
+      "deal_size_estimate": "£50-150k/year",
+      "buyer": "Head of Education + procurement",
+      "sales_cycle_estimate": "16-26 weeks",
+      "priority": "future",
+      "rationale": "Enterprise sale, long cycle, but huge impact and reference"
+    }
+  ],
+  "first_5_targets": {
+    "strategy": "Start with small specialty societies (100-500 members) for fast wins and proof, then use as references for mid-size bodies",
+    "targets": [
+      {
+        "type": "Small specialty society",
+        "research_needed": "List UK specialty societies in dermatology, rheumatology, cardiology, oncology, etc.",
+        "search_method": "Google: 'British Society of [specialty] CPD members'"
+      },
+      {
+        "type": "Allied health body",
+        "research_needed": "Dietetics, podiatry, radiography, paramedics professional bodies",
+        "search_method": "Sheffield Hallam allied health professional bodies list"
+      },
+      {
+        "type": "Regional college chapters",
+        "research_needed": "Royal College regional chapters (Scotland, Wales, specific regions)",
+        "search_method": "Royal College websites > regions/chapters"
+      }
+    ]
+  },
+  "validation_evidence": [
+    {
+      "source": "GMC CPD Guidance",
+      "url": "https://www.gmc-uk.org/education/standards-guidance-and-curricula/guidance/continuing-professional-development",
+      "quote": "Recording of CPD activity should include reflection of the learning gained and likely effect on professional work",
+      "validates": "Outcomes measurement requirement"
+    },
+    {
+      "source": "Royal College of Surgeons CPD",
+      "url": "https://www.rcseng.ac.uk/standards-and-research/standards-and-guidance/revalidation/cpd/",
+      "quote": "Certificates of attendance may prove attendance but say nothing about what has been learned or any changes made as a result",
+      "validates": "Failure of current tools (attendance certificates insufficient)"
+    },
+    {
+      "source": "CPD Outcomes Research",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12492535/",
+      "quote": "The majority of accredited CPD activities do not target clinical behavior change. Evidence linking CPD directly to patient outcomes remains limited.",
+      "validates": "Competitor gap (current CPD doesn't measure behavior change)"
+    },
+    {
+      "source": "Academy of Medical Royal Colleges Standards",
+      "url": "https://www.aomrc.org.uk/wp-content/uploads/2019/08/Accreditation_standards_0719.pdf",
+      "quote": "IACPDA standards require outcome assessment of educational activity",
+      "validates": "Accreditation requirement for outcomes"
+    }
+  ],
+  "next_actions": [
+    "Research 5-10 target societies (find websites, member counts, Education Director names)",
+    "Create landing page emphasizing outcomes for GMC revalidation/accreditation",
+    "Draft outreach email (lead with accreditation audit pain, not platform features)",
+    "Build research config for Medical Societies signals",
+    "Update Apollo search for medical societies + CPD keywords",
+    "7-day outreach test to validate deal size, buyer, urgency"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "icp_id": "icp_002_hcp_publishers",
+  "icp_name": "HCP Publishers",
+  "priority_signals": [
+    {
+      "type": "pain_discussions",
+      "priority": 1,
+      "weight": 0.40,
+      "pain_keywords": [
+        "engagement",
+        "sponsor reporting",
+        "outcomes evidence",
+        "CPD compliance",
+        "CME accreditation",
+        "content performance",
+        "renewal defence",
+        "static content",
+        "poor retention"
+      ],
+      "intent_phrases": [
+        "looking for platform",
+        "need better engagement",
+        "struggling with sponsors",
+        "how to prove",
+        "recommendations for outcomes"
+      ]
+    },
+    {
+      "type": "product_launches",
+      "priority": 2,
+      "weight": 0.25,
+      "launch_keywords": [
+        "new digital platform",
+        "CPD portal",
+        "CME service",
+        "interactive learning",
+        "accreditation expansion"
+      ]
+    },
+    {
+      "type": "conference_activity",
+      "priority": 3,
+      "weight": 0.20,
+      "conference_keywords": [
+        "speaker",
+        "presenting on",
+        "digital publishing",
+        "outcomes measurement",
+        "engagement"
+      ]
+    },
+    {
+      "type": "hiring_signals",
+      "priority": 4,
+      "weight": 0.10,
+      "hiring_keywords": [
+        "Head of Digital",
+        "Product Director",
+        "Platform",
+        "Technology",
+        "Innovation"
+      ]
+    },
+    {
+      "type": "company_news",
+      "priority": 5,
+      "weight": 0.05,
+      "news_keywords": [
+        "sponsor partnership",
+        "platform modernization",
+        "digital transformation",
+        "new service"
+      ]
+    }
+  ],
+  "sources": {
+    "pain_discussions": [
+      "reddit:r/medicalpublishing",
+      "twitter:#medicalpublishing",
+      "twitter:#CPD",
+      "twitter:#CME",
+      "g2:learning-management-systems"
+    ],
+    "product_launches": [
+      "press_releases",
+      "company_blogs"
+    ],
+    "conference_activity": [
+      "conference_listings:medical_publishing",
+      "event_speakers"
+    ],
+    "hiring_signals": [
+      "company_careers"
+    ]
+  },
+  "signal_threshold": 2,
+  "alert_on": "pain_discussions + (product_launches OR hiring_signals)"
+}

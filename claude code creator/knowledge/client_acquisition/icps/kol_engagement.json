@@ -1,0 +1,70 @@
+{
+  "id": "icp_006_kol_engagement",
+  "name": "KOL Engagement Companies",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "medium",
+  "criteria": {
+    "job_titles": [
+      "CEO",
+      "Managing Director",
+      "Head of KOL Management",
+      "Commercial Director",
+      "Head of Content"
+    ],
+    "industries": [
+      "KOL Management",
+      "Medical Communications",
+      "Healthcare Communications"
+    ],
+    "company_size": "10-200 employees",
+    "location": ["UK", "EU", "US"],
+    "pain_points": [
+      "KOL workflow complexity",
+      "Versioning and approvals burden",
+      "Keeping engagement alive between moments",
+      "Proving to sponsors that KOL programmes created engagement and movement, not just attendance"
+    ],
+    "buying_signals": [
+      "Managing large KOL networks",
+      "Running KOL-led programmes for sponsors",
+      "Sponsor pressure for outcomes beyond attendance"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "They want to shift from access-only to proof-led sponsor value",
+    "park": "Unclear about outcomes requirements",
+    "stop": "We sell access, outcomes don't matter"
+  },
+  "what_they_sell": "KOL access + credible content + audience pull",
+  "what_proof_means": "Proof to sponsors that the KOL programme created engagement and movement, not just attendance. Proof for which formats/KOL topics actually land.",
+  "yoke_strengths": [
+    "Workflow and governance for KOL content",
+    "Proof/insight dashboards",
+    "Pre/during/post engagement loops",
+    "Trendlines across a KOL series, not one event"
+  ],
+  "yoke_weaknesses": [
+    "If their value prop is only 'access' and they do not care about outcomes"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke helps KOL engagement companies shift from access-only to proof-led value—showing sponsors which KOL formats and topics drive real engagement.",
+    "key_benefits": [
+      "Manage KOL content workflow with governance and approvals",
+      "Prove KOL programme impact beyond attendance",
+      "Track trendlines across KOL series",
+      "Maintain engagement between events"
+    ],
+    "elevator_pitch": "KOL companies sell access but sponsors want proof of impact. Yoke shows which KOL formats work and keeps engagement alive between events—justifying higher sponsor packages."
+  },
+  "apollo_filters": {
+    "departments": ["KOL Management", "Commercial", "Operations"],
+    "keywords_include": ["KOL management", "key opinion leader", "speaker bureau"],
+    "keywords_exclude": ["recruiting"],
+    "disqualify_filters": ["Access-only model with no outcomes focus"]
+  },
+  "two_lever_framing": {
+    "lever_a": "Increase sponsor value with proof-led KOL programmes",
+    "lever_b": "Reduce KOL workflow complexity and approval friction"
+  }
+}

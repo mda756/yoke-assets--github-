@@ -1,0 +1,68 @@
+{
+  "id": "icp_010_jv_cocreation",
+  "name": "JV / Co-Creation Partners",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "medium",
+  "criteria": {
+    "job_titles": [
+      "CEO",
+      "Managing Director",
+      "Head of Partnerships",
+      "Head of New Products",
+      "Business Development Director"
+    ],
+    "industries": [
+      "Healthcare",
+      "Medical Education",
+      "Professional Services",
+      "Healthcare Technology"
+    ],
+    "company_size": "20-500 employees",
+    "location": ["UK", "EU", "US"],
+    "pain_points": [
+      "JV risk: unclear ownership, unclear decision authority, unclear GTM",
+      "Need rapid MVP foundation",
+      "Product iteration without rebuild"
+    ],
+    "buying_signals": [
+      "Seeking JV/partnership opportunities",
+      "New product line development",
+      "Domain authority + seeking tech enablement"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "Partner brings distribution and a real commercial path, plus clear ownership terms",
+    "park": "Decision authority, IP, and GTM are UNKNOWN",
+    "stop": "JV terms unclear, no distribution commitment"
+  },
+  "what_they_sell": "A new productised programme, typically recurring.",
+  "what_proof_means": "Proof the product works, plus insight loops to improve the offer and defend pricing.",
+  "yoke_strengths": [
+    "Rapid MVP foundation + proof loop + ability to iterate without rebuild"
+  ],
+  "yoke_weaknesses": [
+    "If JV decision rights, IP, or revenue model are unclear. This becomes slow politics."
+  ],
+  "messaging": {
+    "value_proposition": "Yoke enables JV partners to launch co-created products fast—with built-in proof and iteration capability.",
+    "key_benefits": [
+      "Rapid MVP without full build",
+      "Clear proof of product performance",
+      "Iterate without rebuild",
+      "Shared measurement and insight"
+    ],
+    "elevator_pitch": "JV products fail when build is slow and ownership unclear. Yoke provides rapid MVP foundation with shared proof—so partners can launch and iterate together."
+  },
+  "apollo_filters": {
+    "departments": ["Partnerships", "Business Development", "New Products"],
+    "keywords_include": ["partnership", "joint venture", "co-creation", "new product"],
+    "keywords_exclude": ["M&A only"],
+    "disqualify_filters": ["No distribution capability", "Unclear commercial model"]
+  },
+  "examples": ["Axiometrics-type JV", "Classroom-to-Clinic-type JV"],
+  "two_lever_framing": {
+    "lever_a": "Increase JV product success with proof and iteration",
+    "lever_b": "Reduce build time and partnership friction"
+  }
+}

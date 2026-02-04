@@ -1,0 +1,72 @@
+{
+  "id": "icp_005_ime_providers",
+  "name": "IME / Independent Medical Education Providers",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "high",
+  "criteria": {
+    "job_titles": [
+      "CEO",
+      "Managing Director",
+      "Head of Education",
+      "Education Director",
+      "Head of Accreditation",
+      "Commercial Director"
+    ],
+    "industries": [
+      "Independent Medical Education",
+      "IME",
+      "Medical Education",
+      "CME Provider"
+    ],
+    "company_size": "10-300 employees",
+    "location": ["UK", "EU", "US"],
+    "pain_points": [
+      "Reporting burden for accreditation and sponsors",
+      "Fragmentation across channels",
+      "Limited ability to iterate mid-programme",
+      "Sponsor pressure for outcomes evidence"
+    ],
+    "buying_signals": [
+      "Running recurring accredited programmes",
+      "Sponsor reporting requirements",
+      "Multi-channel delivery"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "Recurring programmes + sponsor reporting pressure + ability to act on insight",
+    "park": "Wants outcomes but has no operational owner for iteration",
+    "stop": "Expects Yoke to solve audience acquisition without a channel"
+  },
+  "what_they_sell": "Education programmes with evidence of impact",
+  "what_proof_means": "Outcomes evidence aligned to accreditation expectations. Sponsor reporting that supports renewal and larger packages.",
+  "yoke_strengths": [
+    "Proof and insight packs",
+    "Hybrid/omnichannel journeys",
+    "Trendlines across series",
+    "Governance for accreditation"
+  ],
+  "yoke_weaknesses": [
+    "If they expect Yoke to solve audience acquisition without a channel"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke helps IME providers streamline sponsor reporting and prove programme impact—with accreditation-ready outcomes and longitudinal insight.",
+    "key_benefits": [
+      "Generate sponsor-ready outcomes reports automatically",
+      "Track trendlines across programme series",
+      "Maintain accreditation compliance with audit trails",
+      "Iterate mid-programme based on real-time insight"
+    ],
+    "elevator_pitch": "IME providers face heavy reporting burdens and sponsor pressure for proof. Yoke automates outcomes evidence and provides trendlines—defending renewals and supporting larger packages."
+  },
+  "apollo_filters": {
+    "departments": ["Education", "Accreditation", "Commercial"],
+    "keywords_include": ["independent medical education", "IME", "CME provider", "accredited education"],
+    "keywords_exclude": ["recruiting"],
+    "disqualify_filters": ["No accreditation capability", "Under 10 employees"]
+  },
+  "two_lever_framing": {
+    "lever_a": "Increase sponsor renewals with outcomes evidence",
+    "lever_b": "Reduce reporting burden and programme fragmentation"
+  }
+}

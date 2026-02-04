@@ -1,0 +1,119 @@
+{
+  "id": "icp_007_medcomms_kol_series",
+  "name": "Medcomms + KOL Event Series Owners",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "very_high",
+  "criteria": {
+    "job_titles": [
+      "CEO",
+      "Managing Director",
+      "Head of KOL Programmes",
+      "Commercial Director",
+      "Head of Education",
+      "Programme Director"
+    ],
+    "industries": [
+      "Medical Communications",
+      "Medical Education",
+      "KOL Management"
+    ],
+    "company_size": "5-100 employees",
+    "location": ["UK", "EU", "US"],
+    "pain_points": [
+      "Keeping engagement between events",
+      "Proving impact beyond polls",
+      "Turning series into a product",
+      "Justifying sponsor price increases"
+    ],
+    "buying_signals": [
+      "Running KOL-led event series",
+      "Sponsor packages in place",
+      "Audience ownership"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "They have KOL + audience + sponsor model already. This is one of the cleanest ICP fits if execution owner exists.",
+    "park": "Unclear ownership or execution capability",
+    "stop": "Expect Yoke to generate the audience without the KOL engine"
+  },
+  "what_they_sell": "Sponsor packages tied to KOL authority + audience engagement",
+  "what_proof_means": "Trendlines, confidence shift, decisions, gaps across the series. Evidence to increase sponsor price and renew annual packages.",
+  "yoke_strengths": [
+    "Proof + longitudinal insight as the sponsor product",
+    "Always-on between-event pulses and modules",
+    "Editorial guidance: what to do more/less of, based on evidence"
+  ],
+  "yoke_weaknesses": [
+    "If they expect Yoke to generate the audience without the KOL engine"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke helps KOL series owners turn events into a longitudinal product—with trendlines and always-on engagement that justify higher sponsor packages.",
+    "key_benefits": [
+      "Maintain engagement between events with always-on modules",
+      "Generate trendlines across series for sponsor proof",
+      "Prove confidence shifts and decision impacts",
+      "Get editorial guidance on what topics/formats work"
+    ],
+    "elevator_pitch": "KOL event series need to prove impact beyond attendance. Yoke keeps engagement alive between events and generates trendlines—turning your series into a product that commands higher sponsor prices."
+  },
+  "apollo_filters": {
+    "departments": ["Commercial", "KOL Programmes", "Education"],
+    "keywords_include": ["KOL series", "event series", "medical education series"],
+    "keywords_exclude": ["one-off events only"],
+    "disqualify_filters": ["No owned audience", "No sponsor model", "Under 5 employees"]
+  },
+  "two_lever_framing": {
+    "lever_a": "Increase sponsor packages with longitudinal proof",
+    "lever_b": "Reduce between-event drop-off and content production burden"
+  },
+  "competitor_gap": {
+    "current_tools": [
+      "PowerPoint + in-room polls (SurveyMonkey, Slido)",
+      "Post-event surveys (basic satisfaction)",
+      "Manual Excel reporting"
+    ],
+    "failure_moment": "Sponsor renewal meeting: we show attendance numbers and satisfaction scores, sponsor asks 'But did behavior change? What did they actually learn?'",
+    "consequence": "Lost sponsor renewal ($50k-100k) or forced price reduction",
+    "clock": "Quarterly sponsor review meetings"
+  },
+  "deadline_triggers": [
+    {
+      "type": "sponsor_renewal",
+      "frequency": "quarterly or annual",
+      "urgency": "high",
+      "signal": "Sponsor asks for outcomes data"
+    },
+    {
+      "type": "event_series_cycle",
+      "frequency": "quarterly events",
+      "urgency": "medium",
+      "signal": "Planning next event, need proof from previous"
+    },
+    {
+      "type": "sponsor_budget_planning",
+      "frequency": "annual (Q4)",
+      "urgency": "very_high",
+      "signal": "Sponsor deciding budget allocation for next year"
+    }
+  ],
+  "standard_rollout": {
+    "product": "iCases in-room",
+    "setup_time": "48 hours",
+    "customization_needed": "minimal",
+    "proof_of_delivery": "Medscape Masterclasses case study",
+    "no_custom_score": 2,
+    "description": "White-label iCases setup, upload existing content, run in-room on iPads/laptops, instant analytics dashboard"
+  },
+  "icp_score": {
+    "total": 9,
+    "breakdown": {
+      "pain_intensity": 2,
+      "deadline_trigger": 2,
+      "standard_fit": 2,
+      "buyer_reachable": 2,
+      "evidence_speed": 1
+    },
+    "rationale": "Highest scoring ICP. Clear failure moment (sponsor renewal pressure), hard deadline triggers (quarterly reviews), proven standard rollout (Medscape iCases), buyers easily reachable (MD/Commercial Director level), evidence can be validated quickly with discovery calls."
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "icp_001_medcomms_agencies",
+  "name": "Medcomms Agencies (Delivering Programmes for Pharma/Biotech)",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "high",
+  "criteria": {
+    "job_titles": [
+      "Managing Director",
+      "CEO",
+      "Head of Digital",
+      "Digital Director",
+      "Head of Client Services",
+      "Client Services Director",
+      "Head of Medical Education",
+      "Medical Director",
+      "Operations Director",
+      "Head of Innovation"
+    ],
+    "industries": [
+      "Medical Communications",
+      "Healthcare Communications",
+      "Medical Education",
+      "Medical Advertising",
+      "Pharmaceutical Marketing"
+    ],
+    "company_size": "10-500 employees",
+    "location": ["UK", "EU", "US"],
+    "technologies": [
+      "LMS platforms",
+      "Webinar platforms",
+      "CMS",
+      "Virtual event platforms"
+    ],
+    "pain_points": [
+      "Long build cycles and inconsistent delivery across markets",
+      "Speed and compliance friction",
+      "Rework and limited visibility once delivered into client channels",
+      "Need client-facing evidence that programmes worked",
+      "Renewal and upsell defence pressure",
+      "Dev dependency for interactive content",
+      "Governance chaos across multiple client programmes"
+    ],
+    "buying_signals": [
+      "Running recurring series or portals for clients",
+      "Managing multi-market programmes",
+      "Sponsor reporting requirements",
+      "Hiring for digital/innovation roles",
+      "Launching new service lines",
+      "Client pressure for measurable outcomes"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "Agency runs recurring series/portals and needs measurable proof",
+    "park": "Wants 'interactivity' without proof requirements or no owner",
+    "stop": "Only problem is reach/lead-gen"
+  },
+  "what_they_do": [
+    "Create and deliver content/programmes for pharma/biotech clients",
+    "Run/support events and associated assets"
+  ],
+  "what_they_sell": "Delivery capacity + expertise + programme execution",
+  "what_proof_means": "Client-facing evidence the programme worked, plus renewal/upsell defence",
+  "yoke_strengths": [
+    "Proof they can package: decisions, confidence shift, gaps, engagement depth, trendlines",
+    "Speed and reuse: less rebuild, less dev dependency, faster rollout",
+    "Control: governance reduces compliance chaos"
+  ],
+  "yoke_weaknesses": [
+    "Audience acquisition from scratch",
+    "Agencies usually do not own distribution"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke helps medcomms agencies deliver faster, protect margins, and provide clients with sponsor-ready proof—without dev dependency or compliance friction.",
+    "pain_to_platform_to_outcome": {
+      "pain": "Long build cycles and inconsistent delivery across markets",
+      "platform": "One-click upload + 48-hour deployment + reuse engine",
+      "outcome": "Faster delivery, higher margins, consistent global quality"
+    },
+    "key_benefits": [
+      "Convert existing assets (PDFs, PPTs, videos) into interactive learning in 48 hours",
+      "Provide clients with dashboards showing decisions, confidence shifts, engagement depth",
+      "Reuse content across markets and clients without rebuild",
+      "Reduce dev dependency and compliance friction with built-in governance",
+      "Defend renewals with sponsor-ready proof and trendlines"
+    ],
+    "use_cases": [
+      "Multi-market client programmes with consistent measurement",
+      "Event-based learning with pre/during/post engagement",
+      "CPD/CME accredited programmes with outcomes reporting",
+      "KOL-led series with longitudinal insight"
+    ],
+    "elevator_pitch": "Medcomms agencies get squeezed on speed, compliance, and proof. Yoke lets you convert client assets into interactive learning within 48 hours, measure what works, and reuse across markets—so you deliver faster and defend renewals with real proof.",
+    "outreach_angle": "Quick question on client proof and delivery speed for multi-market programmes"
+  },
+  "apollo_filters": {
+    "departments": ["Operations", "Client Services", "Digital", "Medical", "Innovation"],
+    "keywords_include": ["medical communications", "medcomms", "healthcare communications", "medical education agency", "pharma agency"],
+    "keywords_exclude": ["recruiting", "staffing", "advertising only", "creative agency"],
+    "trigger_events": [
+      "New digital/innovation hire",
+      "New client win announced",
+      "Launching new service line",
+      "Speaking at industry events about outcomes/measurement"
+    ],
+    "disqualify_filters": [
+      "Pure creative/advertising agencies with no medical education",
+      "Agencies under 10 employees (too small)",
+      "Recruitment/staffing agencies"
+    ]
+  },
+  "unknowns": [
+    "Exact buyer roles by agency type",
+    "Typical budget bands for platform investments"
+  ],
+  "two_lever_framing": {
+    "lever_a": "Increase client renewals and upsell with sponsor-ready proof",
+    "lever_b": "Reduce delivery time and dev dependency costs"
+  }
+}

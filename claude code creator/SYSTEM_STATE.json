@@ -1,0 +1,232 @@
+{
+  "last_updated": "2026-02-04T12:00:00Z",
+  "version": "1.1.0",
+  "status": "active",
+
+  "current_priority": {
+    "icp_id": "icp_013_medical_societies_cpd",
+    "icp_name": "Medical Societies CPD",
+    "score": 10,
+    "rationale": "Pure SaaS portal model, regulatory pain validated (GMC revalidation), competitor gap confirmed (LMS track completion not outcomes), 10x larger market than KOL Series, standard CPD templates, perfect proof match",
+    "target_geography": "UK",
+    "next_action": "Build ICP config + research 5-10 target societies + create landing page + 7-day outreach test",
+    "decision_date": "2026-02-04",
+    "pivot_from": "icp_007_medcomms_kol_series"
+  },
+
+  "icp_scores": [
+    {
+      "rank": 1,
+      "icp_id": "icp_013_medical_societies_cpd",
+      "name": "Medical Societies CPD",
+      "score": 10,
+      "pain_intensity": 2,
+      "deadline_trigger": 2,
+      "standard_fit": 2,
+      "buyer_reachable": 2,
+      "evidence_speed": 2,
+      "status": "active_targeting",
+      "model_type": "portal_saas"
+    },
+    {
+      "rank": 2,
+      "icp_id": "icp_007_medcomms_kol_series",
+      "name": "KOL Series Owners",
+      "score": 9,
+      "pain_intensity": 2,
+      "deadline_trigger": 2,
+      "standard_fit": 2,
+      "buyer_reachable": 2,
+      "evidence_speed": 1,
+      "status": "secondary",
+      "model_type": "event_based",
+      "note": "Deprioritized due to event-based model limiting SaaS scale"
+    },
+    {
+      "rank": 2,
+      "icp_id": "icp_002_hcp_publishers",
+      "name": "HCP Publishers",
+      "score": 8,
+      "pain_intensity": 2,
+      "deadline_trigger": 2,
+      "standard_fit": 2,
+      "buyer_reachable": 1,
+      "evidence_speed": 1,
+      "status": "secondary"
+    },
+    {
+      "rank": 3,
+      "icp_id": "icp_005_ime_providers",
+      "name": "IME Providers",
+      "score": 8,
+      "pain_intensity": 2,
+      "deadline_trigger": 2,
+      "standard_fit": 2,
+      "buyer_reachable": 1,
+      "evidence_speed": 1,
+      "status": "secondary"
+    },
+    {
+      "rank": 4,
+      "icp_id": "icp_003_biotech_prelaunch",
+      "name": "Biotech Pre-Launch",
+      "score": 7,
+      "pain_intensity": 2,
+      "deadline_trigger": 2,
+      "standard_fit": 1,
+      "buyer_reachable": 1,
+      "evidence_speed": 1,
+      "status": "future"
+    },
+    {
+      "rank": 5,
+      "icp_id": "icp_001_medcomms_agencies",
+      "name": "Medcomms Agencies",
+      "score": 6,
+      "pain_intensity": 1,
+      "deadline_trigger": 1,
+      "standard_fit": 1,
+      "buyer_reachable": 2,
+      "evidence_speed": 1,
+      "status": "secondary"
+    }
+  ],
+
+  "deprioritized_icps": [
+    {
+      "icp_id": "icp_008_platform_foundation",
+      "name": "Platform Foundation Buyers",
+      "score": 4,
+      "reason": "Want custom builds - violates no-custom rule"
+    },
+    {
+      "icp_id": "icp_010_jv_cocreation",
+      "name": "JV/Co-creation Partners",
+      "score": 3,
+      "reason": "MVP/custom by definition"
+    },
+    {
+      "icp_id": "icp_009_nontech_startups",
+      "name": "Non-tech Startups",
+      "score": 3,
+      "reason": "Unclear buyers, low budget, high custom needs"
+    }
+  ],
+
+  "active_prospects": [],
+
+  "archived_prospects": [
+    {
+      "company": "AS&K Communications",
+      "location": "London, UK",
+      "icp": "icp_007",
+      "status": "archived",
+      "reason": "Strategic pivot to Medical Societies CPD",
+      "archived_date": "2026-02-04"
+    },
+    {
+      "company": "Ashfield MedComms",
+      "location": "UK",
+      "icp": "icp_007",
+      "status": "archived",
+      "reason": "Strategic pivot to Medical Societies CPD",
+      "archived_date": "2026-02-04"
+    },
+    {
+      "company": "OVID Health",
+      "location": "UK",
+      "icp": "icp_007",
+      "status": "archived",
+      "reason": "Strategic pivot to Medical Societies CPD",
+      "archived_date": "2026-02-04"
+    },
+    {
+      "company": "Verve",
+      "location": "UK",
+      "icp": "icp_007",
+      "status": "archived",
+      "reason": "Strategic pivot to Medical Societies CPD",
+      "archived_date": "2026-02-04"
+    },
+    {
+      "company": "InterComm International",
+      "location": "Cambridge, UK",
+      "icp": "icp_007",
+      "status": "archived",
+      "reason": "Strategic pivot to Medical Societies CPD",
+      "archived_date": "2026-02-04"
+    }
+  ],
+
+  "active_experiments": [
+    {
+      "id": "exp_002",
+      "name": "Medical Societies CPD - UK Specialty Societies",
+      "hypothesis": "UK medical societies (100-500 members) need outcomes-based CPD to satisfy GMC revalidation requirements and accreditation audits",
+      "icp": "icp_013",
+      "test_plan": {
+        "outreach_to": 5,
+        "channels": ["Direct email to CEO/Education Director", "LinkedIn"],
+        "timeline_days": 7,
+        "success_metric": "2+ discovery calls, validate deal size and buyer urgency"
+      },
+      "status": "setup_required",
+      "created": "2026-02-04",
+      "stop_rule": "If 0 responses after 10 contacts, test different messaging angle or size band"
+    }
+  ],
+
+  "archived_experiments": [
+    {
+      "id": "exp_001",
+      "name": "KOL Series - UK Small-Room Meetings",
+      "icp": "icp_007",
+      "status": "archived",
+      "reason": "Strategic pivot to Medical Societies CPD (higher SaaS scale potential)",
+      "archived_date": "2026-02-04"
+    }
+  ],
+
+  "tools_operational": {
+    "apollo_search": true,
+    "landing_page_generator": true,
+    "research_engine": true,
+    "wordpress_client": true,
+    "document_converter": true
+  },
+
+  "credentials_configured": {
+    "apollo_io": true,
+    "wordpress": true,
+    "digitalocean_droplet": true,
+    "todoist": true,
+    "trello": true
+  },
+
+  "intelligence_ingestion": {
+    "last_check": "2026-02-04T12:00:00Z",
+    "queue_count": 0,
+    "total_processed": 2,
+    "last_processed": "Validation research: Medical Societies CPD hypothesis"
+  },
+
+  "major_decisions": [
+    {
+      "date": "2026-02-04",
+      "decision": "Strategic pivot to Medical Societies CPD as #1 ICP",
+      "from": "KOL Series Owners (event-based)",
+      "to": "Medical Societies CPD (portal-based SaaS)",
+      "rationale": "Portal-based model = true SaaS scale (vs event logistics). 10/10 score validated through research. Regulatory pain confirmed. 10x larger market.",
+      "logged_in": "ICP_DECISION_HISTORY.md"
+    }
+  ],
+
+  "strategic_rules": {
+    "no_custom_development": true,
+    "standard_rollout_only": true,
+    "value_in_30_days": true,
+    "hypothesis_loop_weekly": true,
+    "pain_led_outreach": true,
+    "competitor_gap_focus": true
+  }
+}

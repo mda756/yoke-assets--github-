@@ -1,0 +1,70 @@
+{
+  "id": "icp_012_medscape_like_platforms",
+  "name": "Medscape-Like Platform Operators",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "high",
+  "criteria": {
+    "job_titles": [
+      "CEO",
+      "Chief Product Officer",
+      "Head of Product",
+      "VP Product",
+      "Head of Commercial",
+      "Commercial Director"
+    ],
+    "industries": [
+      "Medical Publishing",
+      "Healthcare Publishing",
+      "Medical Education Platform",
+      "Healthcare Media"
+    ],
+    "company_size": "100-10000 employees",
+    "location": ["Global", "UK", "EU", "US"],
+    "pain_points": [
+      "Engagement quality and outcomes proof are weak or slow to produce",
+      "Need better proof/insight beyond clicks",
+      "Sponsor inventory outcomes reporting gaps"
+    ],
+    "buying_signals": [
+      "Platform modernization initiatives",
+      "Sponsor revenue pressure",
+      "Seeking engagement depth improvements",
+      "New product development"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "When positioned as proof/insight upgrade or modular format engine",
+    "park": "If they require full stack replacement",
+    "stop": "Full platform replacement expectations"
+  },
+  "what_they_sell": "Reach + outcomes + trust",
+  "what_proof_means": "Sponsor-ready evidence beyond clicks, plus insight to steer editorial and product.",
+  "yoke_strengths": [
+    "As a proof/insight layer, or as a high-engagement format layer they can plug in",
+    "Trendlines and longitudinal insight for sponsor packages"
+  ],
+  "yoke_weaknesses": [
+    "Replacing their entire platform stack. That is rarely the right sell."
+  ],
+  "messaging": {
+    "value_proposition": "Yoke plugs into large platforms as a proof/insight layer—providing engagement depth and sponsor-ready outcomes beyond clicks.",
+    "key_benefits": [
+      "Plug-in proof/insight layer, not platform replacement",
+      "High-engagement format modules",
+      "Sponsor-ready evidence beyond clicks",
+      "Trendlines for editorial and product decisions"
+    ],
+    "elevator_pitch": "Large platforms have reach but need engagement depth. Yoke plugs in as a proof layer—giving sponsors real outcomes evidence and editorial teams insight beyond clicks."
+  },
+  "apollo_filters": {
+    "departments": ["Product", "Commercial", "Editorial"],
+    "keywords_include": ["medical platform", "healthcare platform", "medical publishing", "HCP platform"],
+    "keywords_exclude": ["small publisher"],
+    "disqualify_filters": ["Under 100 employees", "No existing platform"]
+  },
+  "two_lever_framing": {
+    "lever_a": "Increase sponsor revenue with outcomes proof",
+    "lever_b": "Reduce proof production time and editorial guesswork"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "icp_id": "icp_007_medcomms_kol_series",
+  "icp_name": "Medcomms + KOL Event Series Owners",
+  "search_date": "2026-02-03T18:09:02.488059",
+  "filters_used": {
+    "page": 1,
+    "per_page": 50,
+    "person_titles": [
+      "CEO",
+      "Managing Director",
+      "Head of KOL Programmes",
+      "Commercial Director",
+      "Head of Education",
+      "Programme Director"
+    ],
+    "organization_num_employees_ranges": [
+      "1,10",
+      "11,50"
+    ],
+    "q_keywords": "KOL series OR event series OR medical education series",
+    "person_locations": [
+      "UK",
+      "EU",
+      "US"
+    ],
+    "person_departments": [
+      "Commercial",
+      "KOL Programmes",
+      "Education"
+    ]
+  },
+  "total_available": 0,
+  "results_returned": 0,
+  "contacts": []
+}

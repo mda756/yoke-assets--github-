@@ -1,0 +1,41 @@
+{
+  "icp_id": "icp_001_medcomms_agencies",
+  "icp_name": "Medcomms Agencies (Delivering Programmes for Pharma/Biotech)",
+  "search_date": "2026-02-03T17:56:28.615786",
+  "filters_used": {
+    "page": 1,
+    "per_page": 10,
+    "person_titles": [
+      "Managing Director",
+      "CEO",
+      "Head of Digital",
+      "Digital Director",
+      "Head of Client Services",
+      "Client Services Director",
+      "Head of Medical Education",
+      "Medical Director",
+      "Operations Director",
+      "Head of Innovation"
+    ],
+    "organization_num_employees_ranges": [
+      "1,10",
+      "11,50"
+    ],
+    "q_keywords": "medical communications OR medcomms OR healthcare communications OR medical education agency OR pharma agency",
+    "person_locations": [
+      "UK",
+      "EU",
+      "US"
+    ],
+    "person_departments": [
+      "Operations",
+      "Client Services",
+      "Digital",
+      "Medical",
+      "Innovation"
+    ]
+  },
+  "total_available": 0,
+  "results_returned": 0,
+  "contacts": []
+}

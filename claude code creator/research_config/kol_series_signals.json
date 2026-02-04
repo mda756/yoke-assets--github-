@@ -1,0 +1,105 @@
+{
+  "icp_id": "icp_007_medcomms_kol_series",
+  "icp_name": "KOL Series Owners",
+  "priority_signals": [
+    {
+      "type": "pain_discussions",
+      "priority": 1,
+      "weight": 0.45,
+      "pain_keywords": [
+        "sponsor reporting",
+        "sponsor pressure",
+        "prove impact",
+        "engagement between events",
+        "renewal defence",
+        "sponsor packages",
+        "outcomes evidence",
+        "trendlines",
+        "longitudinal data",
+        "series measurement",
+        "KOL engagement metrics"
+      ],
+      "intent_phrases": [
+        "looking for platform",
+        "need better measurement",
+        "struggling with sponsors",
+        "how to prove value",
+        "recommendations for engagement",
+        "measuring series impact"
+      ]
+    },
+    {
+      "type": "conference_activity",
+      "priority": 2,
+      "weight": 0.25,
+      "conference_keywords": [
+        "KOL engagement",
+        "event series",
+        "sponsor outcomes",
+        "measurement",
+        "medical education series"
+      ]
+    },
+    {
+      "type": "product_launches",
+      "priority": 3,
+      "weight": 0.15,
+      "launch_keywords": [
+        "new KOL programme",
+        "event series launch",
+        "sponsor packages",
+        "educational series"
+      ]
+    },
+    {
+      "type": "hiring_signals",
+      "priority": 4,
+      "weight": 0.10,
+      "hiring_keywords": [
+        "KOL Programme Manager",
+        "Events Director",
+        "Medical Education",
+        "Programme Director"
+      ]
+    },
+    {
+      "type": "company_news",
+      "priority": 5,
+      "weight": 0.05,
+      "news_keywords": [
+        "sponsor partnership",
+        "KOL network",
+        "event series",
+        "educational programme"
+      ]
+    }
+  ],
+  "sources": {
+    "pain_discussions": [
+      "reddit:r/medicalwriting",
+      "reddit:r/medcomms",
+      "twitter:#KOLengagement",
+      "twitter:#medicaleducation",
+      "linkedin_posts:medical education"
+    ],
+    "conference_activity": [
+      "conference_listings:medical_education",
+      "event_speakers"
+    ],
+    "product_launches": [
+      "press_releases",
+      "company_blogs"
+    ],
+    "hiring_signals": [
+      "company_careers"
+    ]
+  },
+  "signal_threshold": 2,
+  "alert_on": "pain_discussions + (conference_activity OR product_launches)",
+  "target_companies": [
+    "Medical education companies running KOL-led series",
+    "Medcomms agencies with KOL programmes",
+    "Independent medical education (IME) with speaker bureaus",
+    "KOL management companies"
+  ]
+}

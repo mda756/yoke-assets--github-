@@ -1,0 +1,148 @@
+{
+  "id": "icp_003_biotech_prelaunch",
+  "name": "Biotech Pre-Launch to Phase II (UK/EU)",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "very_high",
+  "criteria": {
+    "job_titles": [
+      "Head of Medical Affairs",
+      "Medical Affairs Director",
+      "VP Medical Affairs",
+      "Chief Medical Officer",
+      "Head of Medical Education",
+      "Medical Strategy Director",
+      "Head of Launch Excellence",
+      "Commercial Director",
+      "VP Commercial",
+      "Head of Market Access"
+    ],
+    "industries": [
+      "Biotechnology",
+      "Biopharmaceuticals",
+      "Gene Therapy",
+      "Cell Therapy",
+      "Rare Disease",
+      "Oncology Biotech"
+    ],
+    "company_size": "20-500 employees",
+    "location": ["UK", "EU", "Switzerland"],
+    "company_stage": [
+      "Pre-launch",
+      "Phase II",
+      "Phase III",
+      "Pre-commercial"
+    ],
+    "technologies": [
+      "CRM",
+      "Medical affairs platforms",
+      "Webinar platforms"
+    ],
+    "pain_points": [
+      "Fixed deadlines (launch plan, congress cadence) with small teams",
+      "Static assets everywhere (slide decks, PDFs, webinars) with weak engagement data",
+      "Insight arrives too late to iterate content fast enough",
+      "No evidence that target HCPs understand clinical story and can apply it",
+      "Knowledge gaps by segment/market/role are invisible",
+      "Limited bandwidth for delivery",
+      "Cannot justify what worked or where to focus next"
+    ],
+    "buying_signals": [
+      "Approaching Phase III or pre-launch stage",
+      "Congress presentations scheduled",
+      "Medical affairs hiring",
+      "HCP education programme tenders",
+      "Launch planning activities",
+      "Advisory board programmes starting",
+      "KOL engagement programmes",
+      "Regulatory milestones approaching",
+      "Funding announcements (Series B+)"
+    ],
+    "funding_signals": [
+      "Series B or later funding",
+      "Partnership deals with pharma",
+      "IPO or SPAC",
+      "Phase transition announcements"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "They have a defined launch cadence and need measurable readiness, not another content dump",
+    "park": "They like 'insight' but cannot name an owner, timeline, or success metric",
+    "stop": "They are buying reach only (paid media, list growth) or want an internal LMS replacement"
+  },
+  "what_they_do": [
+    "Prepare HCP education and readiness for launch milestones (pre, during, post)",
+    "Run investigator and early HCP programmes (meetings, webinars, case-based education) with limited internal delivery bandwidth"
+  ],
+  "what_they_sell": "They do not sell education. They sell adoption of a therapy and strong clinical use in the real world. Internal driver is launch success and risk reduction (medical + commercial alignment).",
+  "what_proof_means": "Evidence that target HCPs understand the clinical story, can apply it, and confidence is moving in the right direction. Evidence of where decision risk and knowledge gaps sit by segment, market, or role. Material that supports internal justification (what worked, where to focus next, what to change).",
+  "yoke_strengths": [
+    "Speed: convert existing assets into interactive journeys fast, then reuse across channels and markets",
+    "Proof: confidence shift, decisions, gaps, engagement heatmaps, benchmark cuts",
+    "Governance: controlled updates, audit trail, approvals",
+    "Always-on loop: pre, during, post touches that keep engagement alive between moments"
+  ],
+  "yoke_weaknesses": [
+    "If they have no cadence and no plan to run any repeatable programme, insight does not compound",
+    "If internal policy blocks external platforms and they will not allow a compliant workaround"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke helps pre-launch biotech teams prepare HCPs faster with measurable readiness—converting existing assets into interactive learning that reveals confidence gaps and decision risks before launch.",
+    "pain_to_platform_to_outcome": {
+      "pain": "Fixed launch deadlines with static assets and no visibility into HCP readiness gaps",
+      "platform": "48-hour asset conversion + confidence scoring + decision pathways + governance",
+      "outcome": "Measurable HCP readiness, visible gaps by segment, faster iteration, launch risk reduction"
+    },
+    "key_benefits": [
+      "Convert slide decks and webinars into interactive case-based learning within 48 hours",
+      "Measure HCP confidence shifts and identify decision risks by market/segment",
+      "Reuse content across congress prep, advisory boards, and field team training",
+      "Maintain always-on engagement between launch milestones",
+      "Justify medical strategy with evidence of what worked and where gaps remain"
+    ],
+    "use_cases": [
+      "Pre-launch HCP readiness programmes",
+      "Congress-linked educational modules",
+      "Investigator training with confidence tracking",
+      "Advisory board follow-up and reinforcement",
+      "Multi-market launch preparation with benchmarking"
+    ],
+    "elevator_pitch": "Pre-launch biotech teams face fixed deadlines and need HCP readiness, not static content dumps. Yoke converts your existing assets into interactive learning that measures confidence, reveals gaps, and lets you iterate fast—so you launch with evidence, not guesswork.",
+    "outreach_angle": "Quick question on HCP readiness measurement and launch risk visibility for Phase II/III programmes"
+  },
+  "apollo_filters": {
+    "departments": ["Medical Affairs", "Medical", "Commercial", "Market Access", "Clinical Development"],
+    "keywords_include": ["biotech", "biopharmaceutical", "gene therapy", "cell therapy", "rare disease", "orphan drug", "pre-launch", "launch excellence"],
+    "keywords_exclude": ["CRO", "recruiting", "consulting", "manufacturing only"],
+    "trigger_events": [
+      "Phase transition announcements",
+      "Funding rounds (Series B+)",
+      "Partnership deals",
+      "Medical affairs hiring",
+      "Congress abstracts accepted",
+      "Regulatory submissions",
+      "Advisory board programmes"
+    ],
+    "disqualify_filters": [
+      "CROs with no commercial pipeline",
+      "Manufacturing-only companies",
+      "Pre-clinical only with no near-term launch",
+      "Under 20 employees"
+    ]
+  },
+  "unknowns": [
+    "Typical budget bands for pre-launch readiness programmes by company size",
+    "Buyer and sign-off pattern across Medical Affairs vs Commercial in smaller biotechs"
+  ],
+  "two_lever_framing": {
+    "lever_a": "Increase launch success probability with measurable HCP readiness and gap visibility",
+    "lever_b": "Reduce content production time and team bandwidth pressure"
+  },
+  "research_requirements": {
+    "funding_stage": "Track Series B+ funding, partnerships, IPOs",
+    "clinical_stage": "Track Phase II/III transitions",
+    "regulatory_milestones": "Track regulatory submissions and approvals",
+    "congress_activity": "Track accepted abstracts and presentations",
+    "hiring_signals": "Track medical affairs and launch team hiring"
+  }
+}

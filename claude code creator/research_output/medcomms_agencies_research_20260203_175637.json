@@ -1,0 +1,75 @@
+{
+  "icp_id": "icp_001_medcomms_agencies",
+  "icp_name": "Medcomms Agencies",
+  "research_date": "2026-02-03T17:56:37.762679",
+  "monitors_run": [
+    "pain_discussions",
+    "product_launches"
+  ],
+  "signals": {
+    "pain_discussions": [
+      {
+        "source": "reddit:r/medicalwriting",
+        "query": "site:reddit.com/r/medicalwriting (\"slow delivery\" OR \"client proof\" OR \"compliance burden\" OR \"dev dependency\" OR \"rework\")",
+        "pain_keywords_matched": [
+          "slow delivery",
+          "client proof",
+          "compliance burden",
+          "dev dependency",
+          "rework"
+        ],
+        "search_date": "2026-02-03T17:56:37.862906",
+        "discussions": []
+      },
+      {
+        "source": "reddit:r/medcomms",
+        "query": "site:reddit.com/r/medcomms (\"slow delivery\" OR \"client proof\" OR \"compliance burden\" OR \"dev dependency\" OR \"rework\")",
+        "pain_keywords_matched": [
+          "slow delivery",
+          "client proof",
+          "compliance burden",
+          "dev dependency",
+          "rework"
+        ],
+        "search_date": "2026-02-03T17:56:37.862919",
+        "discussions": []
+      },
+      {
+        "source": "twitter:#medcomms",
+        "pain_keywords": [
+          "slow delivery",
+          "client proof",
+          "compliance burden",
+          "dev dependency",
+          "rework"
+        ],
+        "search_date": "2026-02-03T17:56:37.862924",
+        "tweets": []
+      },
+      {
+        "source": "twitter:#medicalcommunications",
+        "pain_keywords": [
+          "slow delivery",
+          "client proof",
+          "compliance burden",
+          "dev dependency",
+          "rework"
+        ],
+        "search_date": "2026-02-03T17:56:37.862929",
+        "tweets": []
+      },
+      {
+        "source": "g2:medical-communications",
+        "query": "site:g2.com/categories/medical-communications reviews (\"slow delivery\" OR \"client proof\" OR \"compliance burden\")",
+        "search_date": "2026-02-03T17:56:37.862934",
+        "reviews": []
+      }
+    ],
+    "product_launches": {
+      "source": "product_launches",
+      "method": "press_releases + company_news",
+      "status": "framework_ready"
+    }
+  },
+  "scored_prospects": []
+}

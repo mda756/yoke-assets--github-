@@ -1,0 +1,69 @@
+{
+  "icp_id": "icp_001_medcomms_agencies",
+  "icp_name": "Medcomms Agencies",
+  "research_date": "2026-02-03T17:54:58.414393",
+  "monitors_run": [
+    "pain_discussions"
+  ],
+  "signals": {
+    "pain_discussions": [
+      {
+        "source": "reddit:r/medicalwriting",
+        "query": "site:reddit.com/r/medicalwriting (\"slow delivery\" OR \"client proof\" OR \"compliance burden\" OR \"dev dependency\" OR \"rework\")",
+        "pain_keywords_matched": [
+          "slow delivery",
+          "client proof",
+          "compliance burden",
+          "dev dependency",
+          "rework"
+        ],
+        "search_date": "2026-02-03T17:54:58.520395",
+        "discussions": []
+      },
+      {
+        "source": "reddit:r/medcomms",
+        "query": "site:reddit.com/r/medcomms (\"slow delivery\" OR \"client proof\" OR \"compliance burden\" OR \"dev dependency\" OR \"rework\")",
+        "pain_keywords_matched": [
+          "slow delivery",
+          "client proof",
+          "compliance burden",
+          "dev dependency",
+          "rework"
+        ],
+        "search_date": "2026-02-03T17:54:58.520408",
+        "discussions": []
+      },
+      {
+        "source": "twitter:#medcomms",
+        "pain_keywords": [
+          "slow delivery",
+          "client proof",
+          "compliance burden",
+          "dev dependency",
+          "rework"
+        ],
+        "search_date": "2026-02-03T17:54:58.520413",
+        "tweets": []
+      },
+      {
+        "source": "twitter:#medicalcommunications",
+        "pain_keywords": [
+          "slow delivery",
+          "client proof",
+          "compliance burden",
+          "dev dependency",
+          "rework"
+        ],
+        "search_date": "2026-02-03T17:54:58.520418",
+        "tweets": []
+      },
+      {
+        "source": "g2:medical-communications",
+        "query": "site:g2.com/categories/medical-communications reviews (\"slow delivery\" OR \"client proof\" OR \"compliance burden\")",
+        "search_date": "2026-02-03T17:54:58.520423",
+        "reviews": []
+      }
+    ]
+  },
+  "scored_prospects": []
+}

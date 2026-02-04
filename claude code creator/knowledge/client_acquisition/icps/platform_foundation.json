@@ -1,0 +1,71 @@
+{
+  "id": "icp_008_platform_foundation",
+  "name": "Platform Foundation Buyers (SaaS Foundation + Custom Build)",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "medium",
+  "criteria": {
+    "job_titles": [
+      "CTO",
+      "Head of Product",
+      "Product Director",
+      "VP Engineering",
+      "CEO",
+      "Founder"
+    ],
+    "industries": [
+      "Healthcare Technology",
+      "EdTech",
+      "Digital Health",
+      "SaaS"
+    ],
+    "company_size": "10-200 employees",
+    "location": ["UK", "EU", "US"],
+    "pain_points": [
+      "Building from scratch is slow and expensive",
+      "Integrations and compliance create drag",
+      "Need scalable foundation without full custom build"
+    ],
+    "buying_signals": [
+      "Launching new digital products",
+      "Seeking platform foundation",
+      "Custom integration requirements",
+      "Scaling existing programmes"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "They accept a productised core + defined extension scope and timeline",
+    "park": "They want 'anything built' with no constraints or roadmap discipline",
+    "stop": "Unlimited custom dev expectations without boundaries"
+  },
+  "what_they_sell": "Their own product or programme. Yoke is the foundation layer.",
+  "what_proof_means": "Built-in measurement and alerting that proves performance and guides iteration. Reliability and governability of the core platform.",
+  "yoke_strengths": [
+    "Foundation you can build on + proof/insight loop + speed/reuse",
+    "White-labeling, governance, controlled scale patterns"
+  ],
+  "yoke_weaknesses": [
+    "Unlimited custom dev without boundaries (turns into agency work and margin leak)"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke provides a proven platform foundation with built-in measurement—letting you build custom features on top without starting from scratch.",
+    "key_benefits": [
+      "Start with proven core instead of building from scratch",
+      "Built-in measurement and governance",
+      "White-label and scale",
+      "Define extension scope and integrate with your stack"
+    ],
+    "elevator_pitch": "Building a platform from scratch is slow and expensive. Yoke gives you a proven foundation with measurement built in—so you can add custom features without the build drag."
+  },
+  "apollo_filters": {
+    "departments": ["Product", "Engineering", "Technology"],
+    "keywords_include": ["digital health", "healthtech", "edtech", "platform", "SaaS"],
+    "keywords_exclude": ["consulting", "services only"],
+    "disqualify_filters": ["No product focus", "Pure services company"]
+  },
+  "unknowns": ["Their stack requirements, security posture, integration priorities"],
+  "two_lever_framing": {
+    "lever_a": "Increase product capability without build time",
+    "lever_b": "Reduce platform development costs and integration drag"
+  }
+}

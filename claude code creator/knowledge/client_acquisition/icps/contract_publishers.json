@@ -1,0 +1,70 @@
+{
+  "id": "icp_004_contract_publishers",
+  "name": "Contract Publishers / Content Production for Clients",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "medium",
+  "criteria": {
+    "job_titles": [
+      "Managing Director",
+      "Operations Director",
+      "Client Services Director",
+      "Head of Production",
+      "Head of Content"
+    ],
+    "industries": [
+      "Medical Communications",
+      "Content Production",
+      "Medical Writing",
+      "Healthcare Content"
+    ],
+    "company_size": "10-200 employees",
+    "location": ["UK", "EU", "US"],
+    "pain_points": [
+      "Deliver into the void - cannot see performance data",
+      "Rework and firefighting",
+      "Difficulty defending account retention",
+      "No visibility once content delivered to client systems"
+    ],
+    "buying_signals": [
+      "Managing high-volume client content",
+      "Seeking differentiation beyond production",
+      "Client retention pressure"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "Contract publisher can control or co-own deployment environment (even partially)",
+    "park": "They want proof but have no access to analytics or distribution control",
+    "stop": "They are purely production with no appetite for platform layer"
+  },
+  "what_they_sell": "Output volume, quality, compliance handling, reliability",
+  "what_proof_means": "Proof to the client that the content performed (so they retain the account). Internal proof to reduce rework and firefighting.",
+  "yoke_strengths": [
+    "If they can attach Yoke as the measurement/proof layer and regain visibility",
+    "Speeds up reuse and reduces rebuild cycles across assets"
+  ],
+  "yoke_weaknesses": [
+    "If the client refuses external platforms or the agency cannot control deployment"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke helps contract publishers regain visibility and prove content performance—reducing rework and strengthening client retention.",
+    "key_benefits": [
+      "Attach measurement layer to delivered content",
+      "Prove content performance to clients",
+      "Reduce rework with insight",
+      "Speed up reuse across clients"
+    ],
+    "elevator_pitch": "Contract publishers deliver content then lose visibility. Yoke lets you attach a proof layer—showing clients what worked and strengthening retention."
+  },
+  "apollo_filters": {
+    "departments": ["Operations", "Client Services", "Production"],
+    "keywords_include": ["contract publisher", "content production", "medical writing"],
+    "keywords_exclude": ["recruiting"],
+    "disqualify_filters": ["Under 10 employees", "No client base"]
+  },
+  "unknowns": ["Typical procurement pattern: who signs off platform vs content"],
+  "two_lever_framing": {
+    "lever_a": "Increase client retention with performance proof",
+    "lever_b": "Reduce rework and production cycles"
+  }
+}

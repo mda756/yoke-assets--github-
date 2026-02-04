@@ -1,0 +1,124 @@
+{
+  "id": "icp_002_hcp_publishers",
+  "name": "HCP Publishers / CPD-CME Portals / Learning Publishers",
+  "created_date": "2026-02-03",
+  "status": "active",
+  "priority": "high",
+  "criteria": {
+    "job_titles": [
+      "CEO",
+      "Managing Director",
+      "Head of Digital",
+      "Digital Director",
+      "Head of Content",
+      "Content Director",
+      "Head of Product",
+      "Product Director",
+      "Commercial Director",
+      "Head of CME/CPD",
+      "Publisher"
+    ],
+    "industries": [
+      "Medical Publishing",
+      "Healthcare Publishing",
+      "CPD Provider",
+      "CME Provider",
+      "Medical Education",
+      "Healthcare Education",
+      "Professional Education"
+    ],
+    "company_size": "20-1000 employees",
+    "location": ["UK", "EU", "US"],
+    "technologies": [
+      "LMS",
+      "Content management systems",
+      "Accreditation platforms",
+      "Analytics platforms"
+    ],
+    "pain_points": [
+      "Low engagement with static CPD/education content",
+      "Shallow engagement and weak outcomes evidence",
+      "Insight arrives too late to iterate",
+      "Content gaps are invisible",
+      "Sponsor reporting pressure with limited proof",
+      "Difficulty defending renewals",
+      "Poor retention and return visits"
+    ],
+    "buying_signals": [
+      "Sponsor pressure for outcomes evidence",
+      "Launching new digital products",
+      "Hiring for digital/product roles",
+      "Accreditation expansion",
+      "New sponsor partnerships",
+      "Platform modernization projects"
+    ]
+  },
+  "fit_logic": {
+    "proceed": "Sponsor pressure + owned distribution + desire to iterate fast",
+    "park": "Wants outcomes but has no operational owner for iteration",
+    "stop": "Pure content studio with no channel and no proof requirement"
+  },
+  "what_they_do": [
+    "Publish content and learning products",
+    "Sell audience access and outcomes to sponsors/funders/subscribers"
+  ],
+  "what_they_sell": "Audience + trust + measurable outcomes",
+  "what_proof_means": "Sponsor-ready outcomes evidence and renewal defence",
+  "yoke_strengths": [
+    "Proof + insight loop",
+    "Gap detection via search/chat signals",
+    "Personalisation for retention",
+    "Trendlines for sponsor packs"
+  ],
+  "yoke_weaknesses": [
+    "If there is no distribution channel at all"
+  ],
+  "messaging": {
+    "value_proposition": "Yoke helps HCP publishers turn static content into interactive learning that drives higher engagement, reveals content gaps, and provides sponsor-ready proof for renewals.",
+    "pain_to_platform_to_outcome": {
+      "pain": "Low engagement with static CPD/education content",
+      "platform": "Interactive journeys + gap analysis + engagement heatmaps",
+      "outcome": "Higher completions, more subscribers, better outcomes"
+    },
+    "key_benefits": [
+      "Convert static content into interactive journeys that increase completions",
+      "Reveal content gaps and audience needs through decision data and search signals",
+      "Provide sponsors with confidence shifts, decision pathways, and benchmarking",
+      "Increase retention with personalised learning and progress tracking",
+      "Generate trendlines across series for sponsor renewal packs"
+    ],
+    "use_cases": [
+      "CPD/CME programmes with sponsor reporting requirements",
+      "Multi-series educational portals with longitudinal insight",
+      "Accredited learning with outcomes measurement",
+      "Subscription-based education with retention mechanics"
+    ],
+    "elevator_pitch": "HCP publishers face sponsor pressure for outcomes proof while engagement stays shallow. Yoke converts your static content into interactive learning that reveals what works, what gaps exist, and provides sponsor-ready evidence—increasing completions and defending renewals.",
+    "outreach_angle": "Quick question on sponsor outcomes reporting and content engagement for CPD/CME programmes"
+  },
+  "apollo_filters": {
+    "departments": ["Digital", "Product", "Content", "Commercial", "CME/CPD"],
+    "keywords_include": ["medical publisher", "CPD provider", "CME provider", "healthcare education", "medical education portal", "HCP education"],
+    "keywords_exclude": ["recruiting", "print only", "book publisher"],
+    "trigger_events": [
+      "New digital product launch",
+      "Accreditation expansion",
+      "New sponsor partnerships announced",
+      "Platform modernization initiatives",
+      "Hiring for digital/product roles"
+    ],
+    "disqualify_filters": [
+      "Print-only publishers with no digital",
+      "No owned audience or distribution",
+      "Under 20 employees"
+    ]
+  },
+  "unknowns": [
+    "Typical budget bands by publisher size",
+    "Procurement patterns for platform vs content"
+  ],
+  "two_lever_framing": {
+    "lever_a": "Increase sponsor renewals with outcomes proof and higher engagement",
+    "lever_b": "Reduce content production cycles and reporting burden"
+  }
+}
