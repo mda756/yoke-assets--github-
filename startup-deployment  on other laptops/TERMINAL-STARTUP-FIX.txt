@@ -1,0 +1,99 @@
+
+═══════════════════════════════════════════════════════════
+  TERMINAL STARTUP - CLAUDE CODE AUTO-LAUNCH FIX
+═══════════════════════════════════════════════════════════
+
+
+PROBLEM:
+────────────────────────────────────────────────────────────
+✗ Terminal window opens on reboot
+✗ BUT Claude Code is NOT loaded
+✗ Just a blank PowerShell window appears
+
+
+WHAT WAS WRONG:
+────────────────────────────────────────────────────────────
+The startup-apps.ps1 script had this:
+
+   Start-Process powershell.exe
+
+This just opens a blank PowerShell window!
+
+
+WHAT WAS FIXED:
+────────────────────────────────────────────────────────────
+Updated startup-apps.ps1 to:
+
+1. Check if Claude Code is installed
+2. Check if Windows Terminal is available
+3. Launch Claude Code automatically in the terminal
+4. Falls back to plain PowerShell if Claude not installed
+
+
+NEW BEHAVIOR:
+────────────────────────────────────────────────────────────
+On reboot, you will now see:
+  ✓ Terminal window opens
+  ✓ Claude Code automatically starts
+  ✓ Ready to use immediately!
+
+
+HOW TO TEST:
+────────────────────────────────────────────────────────────
+Option 1: Test without rebooting
+  1. Close any open PowerShell/Terminal windows
+  2. Run this command:
+     powershell -File "C:\Users\matth\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup-apps.ps1"
+  3. Terminal should open with Claude Code loaded
+
+Option 2: Full test
+  1. Restart your PC
+  2. Wait for auto-startup
+  3. Terminal should open with Claude Code running
+
+
+IF IT DOESN'T WORK:
+────────────────────────────────────────────────────────────
+Check if Claude Code is installed:
+  → Open PowerShell
+  → Type: claude --version
+  → Should show version number
+
+If Claude is NOT installed:
+  → The script will open a plain PowerShell instead
+  → This is intentional fallback behavior
+
+
+MANUAL LAUNCH:
+────────────────────────────────────────────────────────────
+If you need to launch Claude manually:
+
+  Using Windows Terminal:
+    wt powershell -NoExit -Command "cd ~; claude"
+
+  Using PowerShell:
+    powershell -NoExit -Command "cd ~; claude"
+
+
+TECHNICAL DETAILS:
+────────────────────────────────────────────────────────────
+Updated file:
+  C:\Users\matth\AppData\Roaming\Microsoft\Windows\
+  Start Menu\Programs\Startup\startup-apps.ps1
+
+Also updated deployment version:
+  startup-deployment  on other laptops\startup-apps.ps1
+
+The script now:
+  1. Tests for Claude installation (Get-Command claude)
+  2. Tests for Windows Terminal (wt command)
+  3. Launches with -NoExit flag (keeps window open)
+  4. Starts in HOME directory
+  5. Auto-runs 'claude' command
+
+
+═══════════════════════════════════════════════════════════
+
+Next reboot, Claude Code will automatically start!
+
+═══════════════════════════════════════════════════════════

@@ -28,5 +28,29 @@ foreach ($path in $tailscalePaths) {
     }
 }
 
-# Launch a new PowerShell window
-Start-Process powershell.exe
+# Launch PowerShell with Claude Code
+# First check if claude is installed
+$claudeInstalled = $false
+try {
+    $null = Get-Command claude -ErrorAction Stop
+    $claudeInstalled = $true
+} catch {
+    $claudeInstalled = $false
+}
+
+if ($claudeInstalled) {
+    # Launch Windows Terminal (or PowerShell) with Claude Code
+    # Check if Windows Terminal is available
+    $wtInstalled = Get-Command wt -ErrorAction SilentlyContinue
+
+    if ($wtInstalled) {
+        # Use Windows Terminal with Claude Code
+        Start-Process wt -ArgumentList "powershell.exe -NoExit -Command `"cd '$HOME'; claude`""
+    } else {
+        # Use regular PowerShell with Claude Code
+        Start-Process powershell.exe -ArgumentList "-NoExit -Command `"cd '$HOME'; claude`""
+    }
+} else {
+    # Claude not installed, just open PowerShell
+    Start-Process powershell.exe
+}
