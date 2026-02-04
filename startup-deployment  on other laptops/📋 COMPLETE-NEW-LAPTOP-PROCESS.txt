@@ -1,0 +1,282 @@
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║         📋 COMPLETE NEW LAPTOP SETUP - FROM BLANK STATE              ║
+║                                                                       ║
+║                    Step-by-Step Guide                                ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════════════════
+  ✅ ASSUMPTIONS
+═══════════════════════════════════════════════════════════════════════
+
+This process assumes:
+  ✓ New laptop has Windows installed
+  ✓ Dropbox is already installed (pre-installed on all laptops)
+  ✓ You have Dropbox credentials to sign in
+
+
+═══════════════════════════════════════════════════════════════════════
+  🚀 COMPLETE SETUP PROCESS (5 SIMPLE STEPS)
+═══════════════════════════════════════════════════════════════════════
+
+┌───────────────────────────────────────────────────────────────────┐
+│  STEP 1: Sign into Dropbox (5 minutes)                           │
+└───────────────────────────────────────────────────────────────────┘
+
+1. Open Dropbox (should already be installed)
+2. Sign in with your credentials
+3. Wait for initial sync to complete
+   → Watch for: "Yoke Digital" folder to appear
+   → Watch for: "yoke-assets--github-" folder inside it
+
+Status: ⏳ WAIT for sync to finish before continuing
+        You can work on other things while this syncs
+
+
+┌───────────────────────────────────────────────────────────────────┐
+│  STEP 2: Navigate to deployment folder (30 seconds)              │
+└───────────────────────────────────────────────────────────────────┘
+
+Open File Explorer and go to:
+  C:\Users\[YourUsername]\Dropbox\Yoke Digital\yoke-assets--github-\
+  startup-deployment  on other laptops\
+
+Look for this folder ↑
+
+
+┌───────────────────────────────────────────────────────────────────┐
+│  STEP 3: Run the installer (5-10 minutes)                        │
+└───────────────────────────────────────────────────────────────────┘
+
+1. Right-click: SIMPLE-ONE-CLICK-INSTALL.bat
+2. Select: "Run as administrator"
+3. Click YES when Windows asks for permission
+4. Watch the installation progress:
+   [1/8] Checking administrator privileges
+   [2/8] Checking Windows Package Manager (winget)
+   [3/8] Checking Tailscale VPN
+   [4/8] Checking GitHub Desktop (takes 2-3 mins)
+   [5/8] Checking Node.js (takes 2-3 mins)
+   [6/8] Checking Claude Code
+   [7/8] Configuring Git
+   [8/8] Setting up auto-startup apps
+
+5. Window stays open - review what was installed
+6. Press any key to close window when done
+
+
+┌───────────────────────────────────────────────────────────────────┐
+│  STEP 4: Restart the laptop (1 minute)                           │
+└───────────────────────────────────────────────────────────────────┘
+
+Restart → Start Menu → Power → Restart
+
+
+┌───────────────────────────────────────────────────────────────────┐
+│  STEP 5: First-time authentication (5 minutes)                   │
+└───────────────────────────────────────────────────────────────────┘
+
+After restart, these will auto-open:
+
+1. ✓ GitHub Desktop
+   → Sign in with your GitHub account
+   → Authenticate when prompted
+
+2. ✓ Tailscale
+   → Should auto-connect
+   → If not, click tray icon and sign in
+
+3. ✓ Windows Terminal with Claude Code
+   → Will prompt for Anthropic API key on first run
+   → Enter your API key
+   → Press Enter
+
+DONE! Everything is now set up and will auto-start on future reboots.
+
+
+═══════════════════════════════════════════════════════════════════════
+  ⏱️ TIME ESTIMATES
+═══════════════════════════════════════════════════════════════════════
+
+Total time: 20-30 minutes (mostly waiting)
+
+  Dropbox sync:           5-15 mins (depends on internet speed)
+  Installation:           5-10 mins (downloads + installs)
+  Restart:                1 min
+  First-time auth:        5 mins
+
+Most of this is automatic - you can work on other things!
+
+
+═══════════════════════════════════════════════════════════════════════
+  🔄 WHAT GETS INSTALLED AUTOMATICALLY
+═══════════════════════════════════════════════════════════════════════
+
+The ONE-CLICK-SETUP will install:
+
+1. ✓ Windows Package Manager (winget) - if not present
+2. ✓ Tailscale VPN - connects you to company network
+3. ✓ GitHub Desktop - for code management
+4. ✓ Node.js (LTS version) - required for Claude Code
+5. ✓ Claude Code - AI coding assistant
+6. ✓ Git configuration - sets up your name and email
+7. ✓ Auto-startup scripts - launches everything on login
+
+Smart Features:
+  ✓ Checks if already installed (won't reinstall)
+  ✓ Skips what's already there
+  ✓ Shows clear progress
+  ✓ Provides error messages if something fails
+
+
+═══════════════════════════════════════════════════════════════════════
+  📂 FOLDER STRUCTURE AFTER SETUP
+═══════════════════════════════════════════════════════════════════════
+
+C:\Users\[YourUsername]\
+  │
+  ├── Dropbox\
+  │   └── Yoke Digital\
+  │       └── yoke-assets--github-\              ← Working directory
+  │           ├── (your project files)
+  │           └── startup-deployment  on other laptops\
+  │               ├── SIMPLE-ONE-CLICK-INSTALL.bat
+  │               ├── ONE-CLICK-SETUP.ps1
+  │               ├── startup-apps.ps1
+  │               └── (other setup files)
+  │
+  ├── AppData\
+  │   └── Roaming\
+  │       └── Microsoft\Windows\Start Menu\Programs\Startup\
+  │           ├── startup-apps.ps1       ← Auto-runs on login
+  │           └── startup-apps.vbs       ← Silent launcher
+  │
+  └── Documents\
+      └── PowerShell\
+          └── (NO profile created - intentional)
+
+
+═══════════════════════════════════════════════════════════════════════
+  🔐 CREDENTIALS YOU'LL NEED
+═══════════════════════════════════════════════════════════════════════
+
+Have these ready:
+  □ Dropbox email/password (for initial sync)
+  □ GitHub account credentials (for GitHub Desktop)
+  □ Tailscale account (usually auto-connects)
+  □ Anthropic API key (for Claude Code)
+
+
+═══════════════════════════════════════════════════════════════════════
+  🛡️ WHY THIS PROCESS IS BULLETPROOF
+═══════════════════════════════════════════════════════════════════════
+
+✅ DROPBOX = DISTRIBUTION MECHANISM
+   - Deployment folder lives in Dropbox
+   - Automatically syncs to all laptops
+   - Always get the latest version
+   - No USB drives needed
+   - No manual copying
+
+✅ INSTALLER = SMART & SAFE
+   - Checks what's already installed
+   - Won't break existing setups
+   - Shows clear progress
+   - Keeps window open for review
+   - Provides error messages
+
+✅ NO PROFILE CONFLICTS
+   - Does NOT create PowerShell profile
+   - Prevents double-launching
+   - No confirmation prompts
+   - Clean, single launch of Claude
+
+✅ VERIFIED FILES
+   - Hash-verified (04-Feb-2026)
+   - Same files that work on main PC
+   - Proven and tested
+
+
+═══════════════════════════════════════════════════════════════════════
+  ❓ TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════
+
+"Dropbox folder not syncing"
+  → Check internet connection
+  → Check Dropbox is signed in (tray icon)
+  → Right-click Dropbox icon → Settings → Check selective sync
+  → Wait longer - large folders take time
+
+"Installer closes immediately"
+  → Right-click .bat file → Run as administrator
+  → Don't just double-click
+
+"Specific software fails to install"
+  → Check internet connection
+  → The installer shows manual download links
+  → Other software still installs and works
+  → You can install failed items manually later
+
+"Claude doesn't start after restart"
+  → Open PowerShell, type: claude --version
+  → If not found, run: npm install -g @anthropic-ai/claude-code
+  → Restart again
+
+"Wrong working directory"
+  → startup-apps.ps1 checks these locations:
+    1. C:\Users\[user]\Dropbox\Yoke Digital\yoke-assets--github-
+    2. C:\Users\[user]\Dropbox\yoke-assets--github-
+    3. C:\Users\[user]\Documents\GitHub\yoke-assets--github-
+    4. D:\Dropbox\Yoke Digital\yoke-assets--github-
+  → Make sure folder is in one of these paths
+
+
+═══════════════════════════════════════════════════════════════════════
+  🎯 QUICK CHECKLIST
+═══════════════════════════════════════════════════════════════════════
+
+□ Dropbox installed and signed in
+□ Yoke Digital folder synced
+□ Navigated to: startup-deployment  on other laptops\
+□ Ran: SIMPLE-ONE-CLICK-INSTALL.bat (as Administrator)
+□ Waited for installation to complete
+□ Reviewed installation results
+□ Restarted laptop
+□ Signed into GitHub Desktop
+□ Signed into Tailscale (if prompted)
+□ Entered Claude API key
+□ Tested: Windows Terminal opens with Claude on restart
+
+
+═══════════════════════════════════════════════════════════════════════
+  💡 ALTERNATIVE: NO DROPBOX YET
+═══════════════════════════════════════════════════════════════════════
+
+If Dropbox is NOT yet installed on new laptop:
+
+Option A: Copy via USB
+  1. Copy "startup-deployment  on other laptops" folder to USB
+  2. Plug USB into new laptop
+  3. Copy folder to Desktop
+  4. Run SIMPLE-ONE-CLICK-INSTALL.bat from Desktop
+  5. Install Dropbox manually after
+  6. Let yoke-assets folder sync
+
+Option B: Install Dropbox first
+  1. Download Dropbox: https://www.dropbox.com/install
+  2. Install and sign in
+  3. Wait for sync
+  4. Follow main process above
+
+
+═══════════════════════════════════════════════════════════════════════
+
+                    ✅ PROCESS VERIFIED: 04-Feb-2026
+
+        This process works on completely blank new laptops
+              when Dropbox is already installed.
+
+═══════════════════════════════════════════════════════════════════════

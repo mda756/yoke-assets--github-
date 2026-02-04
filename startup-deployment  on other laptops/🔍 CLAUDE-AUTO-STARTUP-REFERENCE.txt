@@ -1,0 +1,193 @@
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║     🔍 QUICK REFERENCE - CLAUDE AUTO-STARTUP SETUP                   ║
+║                                                                       ║
+║              Last Updated: 04-Feb-2026                               ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════════════════
+  💬 CONVERSATION CONTEXT
+═══════════════════════════════════════════════════════════════════════
+
+This file references a Claude Code conversation where we:
+  ✓ Fixed Claude Code not auto-starting in Windows Terminal
+  ✓ Removed PowerShell profile conflict
+  ✓ Verified deployment process for new laptops
+  ✓ Created comprehensive setup documentation
+
+
+═══════════════════════════════════════════════════════════════════════
+  🎯 WHAT WAS FIXED (This PC)
+═══════════════════════════════════════════════════════════════════════
+
+LATEST FIX - 04-Feb-2026 (Afternoon):
+PROBLEM: Claude opened but showed debug log messages
+ROOT CAUSE: startup-debug.ps1 was in Startup folder (left over from testing)
+SOLUTION: ✓ Deleted startup-debug.ps1 from Startup folder
+STATUS: ✅ FIXED - Claude now opens cleanly
+
+PREVIOUS FIX - 04-Feb-2026 (Morning):
+PROBLEM: Windows Terminal opened blank, Claude didn't auto-start
+ROOT CAUSES:
+  1. Outdated startup-apps.ps1 in Startup folder
+  2. PowerShell profile had 'claude' command causing conflicts
+SOLUTIONS:
+  ✓ Updated startup-apps.ps1 from deployment folder
+  ✓ Removed 'claude' from PowerShell profile
+  ✓ Verified all files hash-match deployment versions
+STATUS: ✅ FIXED AND VERIFIED
+
+
+═══════════════════════════════════════════════════════════════════════
+  📁 KEY FILE LOCATIONS
+═══════════════════════════════════════════════════════════════════════
+
+STARTUP SCRIPTS (Active):
+  C:\Users\matth\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\
+    → startup-apps.ps1  ✓ (ONLY this file should be here)
+    → startup-debug.ps1 ✗ (DELETED - was causing log messages)
+
+POWERSHELL PROFILE (Fixed):
+  C:\Users\matth\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+  (Now empty/clean - no 'claude' command)
+
+DEPLOYMENT FOLDER (For new laptops):
+  C:\Users\matth\Dropbox\Yoke Digital\yoke-assets--github-\startup-deployment  on other laptops\
+    → ✅ NEW-LAPTOP-SETUP-VERIFIED.txt (Full guide)
+    → SIMPLE-ONE-CLICK-INSTALL.bat (Run this on new PC)
+    → startup-apps.ps1 (Master copy)
+    → startup-apps.vbs (Master copy)
+
+CLAUDE MEMORY:
+  C:\Users\matth\.claude\projects\C--Users-matth\memory\MEMORY.md
+  (Auto-loads in every Claude session)
+
+
+═══════════════════════════════════════════════════════════════════════
+  🚀 QUICK ACTIONS
+═══════════════════════════════════════════════════════════════════════
+
+TO TEST AUTO-STARTUP:
+  Restart your PC - Windows Terminal should open with Claude Code
+
+TO MANUALLY LAUNCH:
+  powershell -File "C:\Users\matth\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup-apps.ps1"
+
+TO SETUP NEW LAPTOP:
+  1. Copy: startup-deployment  on other laptops\ folder
+  2. Run: SIMPLE-ONE-CLICK-INSTALL.bat (as Admin)
+  3. Restart
+  4. Done!
+
+TO VERIFY CURRENT SETUP:
+  powershell -Command "Get-Command claude; Get-Command wt; Test-Path 'C:\Users\matth\Dropbox\Yoke Digital\yoke-assets--github-'"
+
+
+═══════════════════════════════════════════════════════════════════════
+  📋 FILE HASHES (For Verification)
+═══════════════════════════════════════════════════════════════════════
+
+startup-apps.ps1: 4B52C5E430A3D2937E8B82C02E2582B1721644AF6374AC622112FF214B68E0AA
+startup-apps.vbs: 759A39AF60F64C0A6374FF9C00FD7E1405773E3B77CE7CED59CC2848A5D81E65
+
+These match between:
+  - Startup folder (active files)
+  - Deployment folder (master copies)
+
+
+═══════════════════════════════════════════════════════════════════════
+  🔍 HOW TO FIND THIS CONVERSATION IN CLAUDE CODE
+═══════════════════════════════════════════════════════════════════════
+
+SEARCH KEYWORDS:
+  - "Claude auto-startup"
+  - "Windows Terminal not opening"
+  - "startup-apps.ps1"
+  - "PowerShell profile conflict"
+  - "yoke-assets startup deployment"
+
+CONVERSATION DATE: 04-Feb-2026
+
+WHAT WE DISCUSSED:
+  - Windows Terminal not auto-launching Claude
+  - Outdated startup script issue
+  - PowerShell profile causing double-launch
+  - Verification of deployment files for new laptops
+  - Hash verification of all scripts
+  - Created comprehensive documentation
+
+
+═══════════════════════════════════════════════════════════════════════
+  📚 DOCUMENTATION FILES CREATED
+═══════════════════════════════════════════════════════════════════════
+
+1. ✅ NEW-LAPTOP-SETUP-VERIFIED.txt
+   Location: startup-deployment  on other laptops\
+   Contains: Complete new laptop setup guide with verification
+
+2. 🔍 CLAUDE-AUTO-STARTUP-REFERENCE.txt (This file)
+   Location: Desktop (and startup-deployment folder)
+   Contains: Quick reference to find conversation and key info
+
+3. MEMORY.md (Updated)
+   Location: C:\Users\matth\.claude\projects\C--Users-matth\memory\
+   Contains: Auto-loads in every Claude session with setup details
+
+
+═══════════════════════════════════════════════════════════════════════
+  ⚡ QUICK TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════
+
+If Claude shows debug messages or logs:
+  → Delete: startup-debug.ps1 from Startup folder
+  → Keep only: startup-apps.ps1
+  → Restart computer
+
+If Claude doesn't auto-start after restart:
+  1. Check Claude installed: claude --version
+  2. Check Windows Terminal: wt --version
+  3. Check startup script exists (see paths above)
+  4. Run manual test command (see Quick Actions)
+
+If you need to re-fix the setup:
+  1. Copy startup-apps.ps1 from deployment folder to Startup folder
+  2. Clear PowerShell profile (or remove 'claude' command)
+  3. Remove any startup-debug.ps1 files
+  4. Restart
+
+If setting up new laptop:
+  → See: ✅ NEW-LAPTOP-SETUP-VERIFIED.txt (in deployment folder)
+
+
+═══════════════════════════════════════════════════════════════════════
+  💾 BACKUP THIS FILE
+═══════════════════════════════════════════════════════════════════════
+
+This file is stored in:
+  - Desktop (you're reading this copy)
+  - startup-deployment  on other laptops\ folder (backup copy)
+
+If you can't find the conversation, this file has all the key info!
+
+
+═══════════════════════════════════════════════════════════════════════
+  ✅ VERIFICATION STATUS
+═══════════════════════════════════════════════════════════════════════
+
+Current PC Setup:        ✅ FIXED AND VERIFIED (04-Feb-2026)
+Deployment Files:        ✅ VERIFIED FOR NEW LAPTOPS
+PowerShell Profile:      ✅ CONFLICT RESOLVED
+File Integrity:          ✅ HASH-VERIFIED
+Documentation:           ✅ COMPLETE
+
+Ready for restart test and new laptop deployment!
+
+
+═══════════════════════════════════════════════════════════════════════
+
+Need to reference this again? Search for: "CLAUDE-AUTO-STARTUP-REFERENCE"
+
+═══════════════════════════════════════════════════════════════════════
