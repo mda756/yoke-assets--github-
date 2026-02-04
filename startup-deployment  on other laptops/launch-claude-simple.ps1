@@ -1,21 +1,12 @@
 # Simple PowerShell script to launch Claude Code
-# No complex quoting or escaping needed
+# Add npm to PATH and launch Claude
 
 # Set location to home directory
 Set-Location ~
 
-# Get the path to Claude
-$claudePath = "$env:APPDATA\npm\claude.cmd"
+# Add npm to PATH for this session
+$npmPath = "$env:APPDATA\npm"
+$env:PATH = "$npmPath;$env:PATH"
 
-# Check if it exists
-if (Test-Path $claudePath) {
-    # Run Claude
-    & $claudePath
-} else {
-    Write-Host "ERROR: Claude not found at: $claudePath" -ForegroundColor Red
-    Write-Host ""
-    Write-Host "Please install Claude Code:" -ForegroundColor Yellow
-    Write-Host "  npm install -g @anthropic-ai/claude-code" -ForegroundColor White
-    Write-Host ""
-    pause
-}
+# Now just run claude (it's in PATH now)
+claude
