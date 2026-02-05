@@ -5,7 +5,9 @@
 # 1. Install Tailscale
 # 2. Install GitHub Desktop
 # 3. Configure Git
-# 4. Set up auto-startup launcher
+# 4. Install GitHub CLI
+# 5. Set up auto-startup launcher (GitHub → Tailscale → Terminal)
+# 6. Configure Claude Code settings (auto-approval for routine operations)
 # ============================================================================
 
 # Requires Administrator privileges
@@ -125,6 +127,31 @@ if (Test-Path $scriptPath) {
 }
 
 # ============================================================================
+# 7. CONFIGURE CLAUDE CODE SETTINGS (AUTO-APPROVAL)
+# ============================================================================
+Write-Host ""
+Write-Host "[7/7] Configuring Claude Code settings..." -ForegroundColor Green
+
+$claudeSettingsDir = Join-Path $env:USERPROFILE ".claude"
+$claudeSettingsFile = Join-Path $claudeSettingsDir "settings.local.json"
+$settingsTemplate = Join-Path $PSScriptRoot "claude-settings-template.json"
+
+# Create .claude directory if it doesn't exist
+if (-not (Test-Path $claudeSettingsDir)) {
+    New-Item -ItemType Directory -Path $claudeSettingsDir -Force | Out-Null
+    Write-Host "  ✓ Created .claude directory" -ForegroundColor Gray
+}
+
+# Copy settings template if it exists
+if (Test-Path $settingsTemplate) {
+    Copy-Item $settingsTemplate $claudeSettingsFile -Force
+    Write-Host "  ✓ Claude settings configured for auto-approval" -ForegroundColor Gray
+    Write-Host "    (Routine operations auto-approved, security/stability prompts remain)" -ForegroundColor Gray
+} else {
+    Write-Host "  ⚠ Settings template not found - manual configuration needed" -ForegroundColor Yellow
+}
+
+# ============================================================================
 # COMPLETION
 # ============================================================================
 Write-Host ""
@@ -143,10 +170,16 @@ Write-Host "2. Tailscale (if not connected):" -ForegroundColor Yellow
 Write-Host "   - Click the Tailscale tray icon and sign in"
 Write-Host "   OR generate an auth key at: https://login.tailscale.com/admin/settings/keys"
 Write-Host ""
-Write-Host "3. On next login, these will auto-start:" -ForegroundColor Yellow
-Write-Host "   ✓ GitHub Desktop"
-Write-Host "   ✓ Tailscale"
-Write-Host "   ✓ PowerShell window"
+Write-Host "3. On next login, these will auto-start IN ORDER:" -ForegroundColor Yellow
+Write-Host "   ✓ GitHub Desktop (starts first)"
+Write-Host "   ✓ Tailscale (waits 3 seconds)"
+Write-Host "   ✓ Windows Terminal (waits 5 seconds)"
+Write-Host "   → Sequential startup ensures everything initializes properly"
+Write-Host ""
+Write-Host "4. Claude Code configured for auto-approval:" -ForegroundColor Yellow
+Write-Host "   ✓ Routine operations proceed automatically"
+Write-Host "   ⚠ Security/stability operations still prompt"
+Write-Host "   → No more pressing '2' for regular tasks!"
 Write-Host ""
 Write-Host "Press any key to exit..."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")

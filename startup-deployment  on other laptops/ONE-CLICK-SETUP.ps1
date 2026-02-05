@@ -55,7 +55,7 @@ Start-Sleep -Seconds 2
 # Configuration
 $GIT_USERNAME = "mda756"
 $GIT_EMAIL = "matt@Yokehealth.com"
-$TOTAL_STEPS = 8
+$TOTAL_STEPS = 9
 
 # ============================================================================
 # STEP 1: Check Administrator
@@ -271,7 +271,7 @@ try {
 # ============================================================================
 # STEP 8: Setup Auto-Startup
 # ============================================================================
-Write-Step 8 $TOTAL_STEPS "Setting up auto-startup apps"
+Write-Step 8 $TOTAL_STEPS "Setting up auto-startup apps (GitHub → Tailscale → Terminal)"
 
 $startupFolder = [Environment]::GetFolderPath('Startup')
 $scriptPath = Join-Path $PSScriptRoot "startup-apps.ps1"
@@ -282,12 +282,46 @@ if ((Test-Path $scriptPath) -and (Test-Path $vbsPath)) {
         Copy-Item $scriptPath $startupFolder -Force -ErrorAction Stop
         Copy-Item $vbsPath $startupFolder -Force -ErrorAction Stop
         Write-Success "Auto-startup configured"
+        Write-Info "Startup order: GitHub (3s delay) → Tailscale (5s delay) → Terminal"
         Write-Info "Location: $startupFolder"
     } catch {
         Write-Error-Safe "Could not copy startup files: $_"
     }
 } else {
     Write-Error-Safe "Startup files not found in current folder"
+}
+
+# ============================================================================
+# STEP 9: Configure Claude Code Settings
+# ============================================================================
+Write-Step 9 $TOTAL_STEPS "Configuring Claude Code auto-approval settings"
+
+$claudeSettingsDir = Join-Path $env:USERPROFILE ".claude"
+$claudeSettingsFile = Join-Path $claudeSettingsDir "settings.local.json"
+$settingsTemplate = Join-Path $PSScriptRoot "claude-settings-template.json"
+
+# Create .claude directory if it doesn't exist
+if (-not (Test-Path $claudeSettingsDir)) {
+    try {
+        New-Item -ItemType Directory -Path $claudeSettingsDir -Force -ErrorAction Stop | Out-Null
+        Write-Success "Created .claude directory"
+    } catch {
+        Write-Error-Safe "Could not create .claude directory: $_"
+    }
+}
+
+# Copy settings template if it exists
+if (Test-Path $settingsTemplate) {
+    try {
+        Copy-Item $settingsTemplate $claudeSettingsFile -Force -ErrorAction Stop
+        Write-Success "Claude auto-approval configured"
+        Write-Info "Routine operations auto-approved (no more pressing '2'!)"
+        Write-Info "Security/stability operations still prompt for safety"
+    } catch {
+        Write-Error-Safe "Could not copy settings file: $_"
+    }
+} else {
+    Write-Skip "Settings template not found - manual configuration needed"
 }
 
 # ============================================================================
@@ -327,7 +361,8 @@ if ($claudeInstalled) {
 }
 
 Write-Host "  [OK] Git Configuration" -ForegroundColor Green
-Write-Host "  [OK] Auto-startup Setup" -ForegroundColor Green
+Write-Host "  [OK] Auto-startup Setup (GitHub → Tailscale → Terminal)" -ForegroundColor Green
+Write-Host "  [OK] Claude Code Auto-Approval Settings" -ForegroundColor Green
 Write-Host ""
 
 Write-Host "========================================================================" -ForegroundColor Cyan
@@ -336,15 +371,20 @@ Write-Host "====================================================================
 Write-Host ""
 Write-Host "1. RESTART your PC to activate auto-startup" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "2. After restart, these will open automatically:" -ForegroundColor White
-Write-Host "   - GitHub Desktop (sign in on first launch)" -ForegroundColor Gray
-Write-Host "   - Tailscale (should already be connected)" -ForegroundColor Gray
-Write-Host "   - Terminal with Claude Code" -ForegroundColor Gray
+Write-Host "2. After restart, these will open IN ORDER:" -ForegroundColor White
+Write-Host "   - GitHub Desktop (starts first, waits 3 seconds)" -ForegroundColor Gray
+Write-Host "   - Tailscale (starts second, waits 5 seconds)" -ForegroundColor Gray
+Write-Host "   - Terminal with Claude Code (starts last)" -ForegroundColor Gray
+Write-Host "   → Sequential startup ensures everything initializes properly" -ForegroundColor DarkGray
 Write-Host ""
 Write-Host "3. First-time setup:" -ForegroundColor White
 Write-Host "   - GitHub Desktop: Sign in with your GitHub account" -ForegroundColor Gray
 Write-Host "   - Tailscale: Should auto-connect (or sign in via tray icon)" -ForegroundColor Gray
 Write-Host "   - Claude Code: Will prompt for Anthropic API key on first run" -ForegroundColor Gray
+Write-Host ""
+Write-Host "4. Claude Code is now configured for auto-approval:" -ForegroundColor White
+Write-Host "   - Routine operations proceed automatically (no more pressing '2'!)" -ForegroundColor Gray
+Write-Host "   - Security/stability operations still prompt for safety" -ForegroundColor Gray
 Write-Host ""
 Write-Host "========================================================================" -ForegroundColor Cyan
 Write-Host ""

@@ -52,10 +52,12 @@ When done, restart the laptop.
 ║                    THAT'S IT!                             ║
 ╚═══════════════════════════════════════════════════════════╝
 
-After restart:
-  ✓ GitHub Desktop opens automatically
-  ✓ Tailscale connects automatically
-  ✓ Everything is configured
+After restart (apps start in order with delays):
+  ✓ GitHub Desktop opens first (waits 3 seconds)
+  ✓ Tailscale starts second (waits 5 seconds)
+  ✓ Windows Terminal opens last (everything ready!)
+
+This ensures proper startup order: GitHub → Tailscale → Terminal
 
 
 ┌───────────────────────────────────────────────────────────┐
@@ -84,6 +86,7 @@ The script is smart:
   ✓ Only installs what's missing
   ✓ Shows clear progress messages
   ✓ Keeps window open so you can see what happened
+  ✓ Starts apps in order with delays (GitHub → Tailscale → Terminal)
 
 
 ═══════════════════════════════════════════════════════════

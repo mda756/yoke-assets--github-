@@ -1,8 +1,9 @@
 # Startup script to launch GitHub Desktop, Tailscale, and Claude Code
 # Created for auto-start on login
 # Self-contained - no external file dependencies
+# STARTUP ORDER: GitHub → Tailscale → Windows Terminal (with delays for proper initialization)
 
-# Launch GitHub Desktop (common installation paths)
+# STEP 1: Launch GitHub Desktop (common installation paths)
 $githubPaths = @(
     "$env:LOCALAPPDATA\GitHubDesktop\GitHubDesktop.exe",
     "$env:LOCALAPPDATA\Programs\GitHubDesktop\GitHubDesktop.exe",
@@ -12,11 +13,15 @@ $githubPaths = @(
 foreach ($path in $githubPaths) {
     if (Test-Path $path) {
         Start-Process $path
+        Write-Host "Starting GitHub Desktop..." -ForegroundColor Green
         break
     }
 }
 
-# Launch Tailscale (start the GUI)
+# Wait for GitHub to initialize
+Start-Sleep -Seconds 3
+
+# STEP 2: Launch Tailscale (start the GUI)
 $tailscalePaths = @(
     "C:\Program Files\Tailscale\tailscale-ipn.exe",
     "C:\Program Files\Tailscale\tailscale.exe"
@@ -25,11 +30,15 @@ $tailscalePaths = @(
 foreach ($path in $tailscalePaths) {
     if (Test-Path $path) {
         Start-Process $path
+        Write-Host "Starting Tailscale..." -ForegroundColor Green
         break
     }
 }
 
-# Launch Claude Code in a terminal
+# Wait for Tailscale to connect
+Start-Sleep -Seconds 5
+
+# STEP 3: Launch Claude Code in Windows Terminal
 # Add npm to PATH so Claude command works
 $npmPath = "$env:APPDATA\npm"
 $env:PATH = "$npmPath;$env:PATH"
@@ -70,11 +79,13 @@ if ($claudeInstalled) {
         $useWindowsTerminal = $false
     }
 
-    # Launch Claude in terminal
+    # Launch Claude in terminal with explicit PATH
+    $claudePath = "$env:APPDATA\npm"
     if ($useWindowsTerminal) {
-        Start-Process wt -ArgumentList "powershell.exe", "-NoExit", "-Command", "cd '$workingDir'; claude"
+        $wtCommand = "-d `"$workingDir`" powershell.exe -NoExit -Command `"`$env:PATH='$claudePath;'+`$env:PATH; claude --trust`""
+        Start-Process wt -ArgumentList $wtCommand
     } else {
-        Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "cd '$workingDir'; claude"
+        Start-Process powershell.exe -ArgumentList "-NoExit", "-Command", "`$env:PATH='$claudePath;'+`$env:PATH; cd '$workingDir'; claude --trust"
     }
 } else {
     # Claude not installed, just open PowerShell in home directory

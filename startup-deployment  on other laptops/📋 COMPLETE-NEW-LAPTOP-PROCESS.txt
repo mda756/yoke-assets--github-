@@ -62,7 +62,8 @@ Look for this folder ↑
    [5/8] Checking Node.js (takes 2-3 mins)
    [6/8] Checking Claude Code
    [7/8] Configuring Git
-   [8/8] Setting up auto-startup apps
+   [8/8] Setting up auto-startup apps (GitHub → Tailscale → Terminal)
+   [9/9] Configuring Claude Code auto-approval settings
 
 5. Window stays open - review what was installed
 6. Press any key to close window when done
@@ -79,20 +80,29 @@ Restart → Start Menu → Power → Restart
 │  STEP 5: First-time authentication (5 minutes)                   │
 └───────────────────────────────────────────────────────────────────┘
 
-After restart, these will auto-open:
+After restart, these will auto-open IN ORDER with proper delays:
 
-1. ✓ GitHub Desktop
+1. ✓ GitHub Desktop (starts first)
+   → Opens immediately on restart
    → Sign in with your GitHub account
    → Authenticate when prompted
+   → Wait 3 seconds for initialization...
 
-2. ✓ Tailscale
+2. ✓ Tailscale (starts after GitHub is ready)
+   → Auto-launches after GitHub initializes
    → Should auto-connect
    → If not, click tray icon and sign in
+   → Wait 5 seconds for VPN connection...
 
-3. ✓ Windows Terminal with Claude Code
+3. ✓ Windows Terminal with Claude Code (starts last)
+   → Opens after Tailscale is connected
+   → This ensures GitHub is ready and network is connected
    → Will prompt for Anthropic API key on first run
    → Enter your API key
    → Press Enter
+
+STARTUP ORDER: GitHub → Tailscale → Windows Terminal (with delays)
+This ensures everything has time to initialize before the next app starts.
 
 DONE! Everything is now set up and will auto-start on future reboots.
 
@@ -124,12 +134,22 @@ The ONE-CLICK-SETUP will install:
 5. ✓ Claude Code - AI coding assistant
 6. ✓ Git configuration - sets up your name and email
 7. ✓ Auto-startup scripts - launches everything on login
+     → Ordered startup: GitHub → Tailscale → Terminal
+     → Built-in delays for proper initialization
+     → Ensures everything is ready before next app starts
+8. ✓ Claude Code auto-approval settings
+     → Auto-approves routine operations (no more pressing 2!)
+     → Still prompts for security/payment/stability operations
+     → Configured centrally, works on all new laptops
 
 Smart Features:
   ✓ Checks if already installed (won't reinstall)
   ✓ Skips what's already there
   ✓ Shows clear progress
   ✓ Provides error messages if something fails
+  ✓ Sequential startup with delays (GitHub → Tailscale → Terminal)
+  ✓ Auto-approval for routine tasks (git, file ops, reading, etc.)
+  ✓ Safe prompts for critical operations (installs, deletions, system changes)
 
 
 ═══════════════════════════════════════════════════════════════════════
